@@ -1,0 +1,197 @@
+.product_inforAboutProduct{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.product_inforAboutProduct_title{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    background: #F4F4F4;
+    border-bottom: 1px solid #555;
+    position: relative;
+}
+
+.product_inforAboutProduct_title h3{
+    float: left;
+    display: inline-block;
+    width:auto;
+    height: 70px;
+    padding: 0 10px;
+    max-width: 460px;
+    margin-top: 5px;
+    font-weight: normal;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.product_inforAboutProduct_title_img{
+    float: left;
+    display: inline-block;
+    width: 200px;
+    height: 70px;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+.product_inforAboutProduct_title_img img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.product_inforAboutProduct_content{
+    width: 96%;
+    height: 390px;
+    padding: 10px 2%;
+    position: relative;
+}
+
+.product_inforAboutProduct_content_left{
+    float: left;
+    width: 49%;
+    height: 89%;
+    margin-right: 8px;
+    border: 1px solid #000;
+    position:relative;
+    overflow-y: scroll;
+}
+
+.product_inforAboutProduct_content_left_search{
+    width: 96%;
+    padding: 5px 2%;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    float: left;
+}
+.product_inforAboutProduct_content_left_search span{
+    font-size: 12px;
+    margin-right: 10px;
+}
+.product_inforAboutProduct_content_left_search input{
+    font-size: 12px;
+    width: 160px;
+    height: 12px;
+    line-height: 12px;
+    padding: 6px;
+    margin-right: 10px;
+}
+.product_inforAboutProduct_content_left_search a{
+    display: inline-block;
+    width: 60px;
+    height: 14px;
+    line-height: 14px;
+    padding: 7px;
+    font-size: 14px;
+    background: #f00;
+    color: #fff;
+    text-align: center;
+}
+.product_inforAboutProduct_content_right_template_layer,.product_inforAboutProduct_content_left_template_layer{
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 30px;
+}
+.product_inforAboutProduct_content_left_title,.product_inforAboutProduct_content_right_title{
+    width: 314px;
+    height: 30px;
+    line-height: 30px;
+    position: fixed;
+    background: #FFEEC2;
+    z-index: 2;
+}
+.product_left_inforName{
+    float: left;
+    width: 270px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-right: 1px solid #fff;
+}
+.product_left_oper{
+    float: left;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.product_right_inforName{
+    float: left;
+    width: 270px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.product_right_oper{
+    float: left;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-right: 1px solid #fff;
+}
+.product_right_inforName span,.product_left_inforName span{
+    display: block;
+    width: 90%;
+    padding: 0 5%;
+    height: 30px;
+    line-height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+.product_left_oper a{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background:url("image/back.png") no-repeat 13px 7px;
+}
+.product_right_oper a{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background:url("image/go.png") no-repeat 13px 7px;
+}
+
+.product_inforAboutProduct_content_right{
+    float: left;
+    width: 49%;
+    height: 89%;
+    border: 1px solid #000;
+    overflow-y: scroll;
+}
+.product_inforAboutProduct_content_left_template,.product_inforAboutProduct_content_right_template{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.product_inforAboutProduct_content_left_template:nth-child(odd),.product_inforAboutProduct_content_right_template:nth-child(odd){
+    background: #efefef;
+}
+
+.product_inforAboutProduct_oper{
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
+.product_inforAboutProduct_oper a{
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #09f;
+    color: #fff;
+    font-size: 14px;
+    margin: 10px;
+}
+.product_inforAboutProduct_oper a:hover{
+    background: #f00;
+}

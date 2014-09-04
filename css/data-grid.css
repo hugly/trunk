@@ -1,0 +1,46 @@
+﻿.data-grid { margin:10px;width:auto;min-width:792px;height: auto;  display:block;}
+.data-grid .headr-bar {  width:100%;height: 30px;line-height: 30px; position: relative;}
+.data-grid .headr-bar .btn {float: right; padding-right: 5px; display:inline-block; height: 30px; line-height: 30px; padding-left: 20px; background:no-repeat 0 50%;}
+.data-grid .search-bar {width: 100%; height: 30px;line-height: 30px;position: relative; margin: 10px 0; }
+.data-grid .search-bar span{ font-size: 12px; margin-right: 10px;}
+.data-grid .search-bar input{ font-size: 12px; width: 160px; height: 12px; line-height: 12px; padding: 6px; margin-right: 10px;}
+.data-grid .search-bar a{ display: inline-block; width: 60px; height: 14px; line-height: 14px; padding: 7px; font-size: 14px; background: #f00; color: #fff; text-align: center;}
+.data-grid .data-table{ width: 100%; height: auto; position: relative;}
+.data-grid .data-header{ width: 99%; height: 32px; line-height: 32px; position: relative; border: 1px solid #AEB2BA;background: #F4F4F4;}
+.data-grid .data-row:nth-child(odd){ background: #dde7f3;}
+.data-grid .data-row{
+    overflow: hidden;  width: 99%; height: 42px; line-height: 42px; position: relative; border: 1px solid #AEB2BA; margin-top: -1px;}
+.data-grid .data-empty-row{ color:orangered;width: 100%; height: 42px; line-height: 42px; position: relative; border: 1px solid #AEB2BA; margin-top: -1px;text-align:center;}
+.data-grid .row-column .btn {display: inline-block; height: 30px; line-height: 30px;padding-left: 18px;margin-left: 0px;background:no-repeat 0 7px;}
+.data-grid .row-column{float: left; width: auto; border-right: 1px solid #AEB2BA; margin-right:-1px; text-align: center; position: relative;}
+.data-grid .row-column > span {text-align: center; display: block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.data-grid .row-column.left,.data-grid .row-column.left > span{text-align: left;}
+.data-grid .row-column.right,.data-grid .row-column.right > span{text-align: right;}
+.data-grid .row-column.span01 { width: 8.333333333333332%; min-width:66px; }
+.data-grid .row-column.span02{ width: 16.666666666666664%;min-width:132px;}
+.data-grid .row-column.span03{ width:25%;min-width:198px;}
+.data-grid .row-column.span04{ width: 33.33333333333333%;min-width:264px;}
+.data-grid .row-column.span05{ width: 41.66666666666667%;min-width:330px;}
+.data-grid .row-column.span06{ width:50%;min-width:396px;}
+.data-grid .row-column.span07{ width: 58.333333333333336%;min-width:462px;}
+.data-grid .row-column.span08{ width: 66.66666666666666%;min-width:528px;}
+.data-grid .row-column.span09{ width:75%;min-width:594px;}
+.data-grid .row-column.span10{ width: 83.33333333333334%;min-width:660px;}
+.data-grid .row-column.span11{ width: 91.66666666666666%;min-width:726px;}
+.data-grid .row-column.span12{ width:100%;min-width:792px;}
+.data-grid .row-column.span15{ width: 16.466666666666664%; min-width: 128px; border: none; }
+.data-grid .row-column > *{ margin: auto 8px;}
+
+.data-grid .row-column a{
+    display: block;
+    height: 42px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.data-grid .row-column .img { margin: 0 8px;margin-top:-2px; padding:0; text-align: center; height:44px;}
+.data-grid .row-column .img span {height: 42px;display: inline-block;vertical-align: middle;}
+.data-grid .row-column .img img { max-height:38px; max-width:100%;vertical-align: middle; margin:auto; border:none; }
+.data-grid .btn.btn-add {background-image:url('../image/add-row.gif');}
+.data-grid .btn.btn-edit  {background-image:url('../image/edit.png');}
+.data-grid .btn.btn-del  {background-image:url('../image/delete.gif');}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>商品</title>
+    <link rel="stylesheet" type="text/css" href="product_commodity.css">
+    <link rel="stylesheet" type="text/css" href="../../css/all.css">
+    <script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="../../js/jq.extend.js"></script>
+    <script type="text/javascript" src="product_commodity.js"></script>
+</head>
+<body>
+<div class="product_nav">
+    <ul>
+        <li class="active"><a href="javascript:;">商品</a></li>
+        <li><a href="product_levellist.html">商品等级</a></li>
+        <li><a href="product_contrast.html">比价商家</a></li>
+        <li><a href="product_review.html">商品评论</a></li>
+        <li><a href="product_classification.html">分类管理</a></li>
+        <li><a href="product_exchange.html">兑换商品管理</a></li>
+    </ul>
+</div>
+
+<div class="product_commodity">
+    <div class="add_product_commodity"><a href="javascript:;" id="add_product_commodity">添加新商品</a> </div>
+    <div class="search_product_commodity">
+        <div class="search_product_commodity_search">
+            <span>搜索关键字:</span>
+            <input class="search_product_commodity_search_pro" type="text">
+            <a href="javascript:;" id="search_product_query">查询</a>
+        </div>
+    </div>
+    <div class="product_commodity_list" id="product_commodity_title">
+        <div class="product_commodity_title">
+            <div class="product_commodity_select">选择</div>
+            <div class="product_commodity_sort">排序</div>
+            <div class="product_commodity_name">商品名称</div>
+            <div class="product_commodity_logo">商品图片</div>
+            <div class="product_commodity_code">商品编码</div>
+            <div class="product_commodity_price">市场价</div>
+            <div class="porduct_commodity_protype">商品类型</div>
+            <div class="product_commodity_addContrast">商品比价</div>
+            <div class="product_commodity_consu">关联资讯</div>
+            <div class="product_commodity_dis">显示状态</div>
+            <div class="product_commodity_addData">添加时间</div>
+            <div class="product_commodity_oper">操作</div>
+        </div>
+        <div class="product_commodity_detail" id="product_commodity_template" style="display: none;">
+            <div class="product_commodity_select"><input type="checkbox" class="product_commodity_chose"></div>
+            <div class="product_commodity_sort"><span></span></div>
+            <div class="product_commodity_name"><a href="javascript:;"></a></div>
+            <div class="product_commodity_logo"><img class="product_commodity_logo_img" src> </div>
+            <div class="product_commodity_code"><span></span></div>
+            <div class="product_commodity_price"><span></span></div>
+            <div class="porduct_commodity_protype"><span></span></div>
+            <div class="product_commodity_addContrast"><a href="javascript:;">修改比价</a></div>
+            <div class="product_commodity_consu"><a href="javascript:;">相关资讯</a></div>
+            <div class="product_commodity_dis"><a href="javascript:;"></a></div>
+            <div class="product_commodity_addData"><span></span></div>
+            <div class="product_commodity_oper"><a class="product_commodity_detail_edit" href="javascript:;">编辑</a> <a class="product_commodity_detail_del" href="javascript:;">删除</a> </div>
+        </div>
+    </div>
+</div>
+<!--商品比价-->
+<div class="add_product_contrast_con" id="add_product_contrast_con"></div>
+<div class="add_product_addcommodity_goodslist" id="add_product_addcommodity_goodslist" style="display:none;">
+    <div class="add_product_addcommodity_goodslist_content">
+        <div class="add_product_addcommodity_title">
+            <div class="add_product_addcommodity_goods_store">比价商家</div>
+            <div class="add_product_addcommodity_goods_price">对比价格</div>
+            <div class="add_product_addcommodity_goods_link">对比链接</div>
+            <div class="add_product_addcommodity_goods_sort">排序</div>
+            <div class="add_product_addcommodity_goods_dis">是否显示</div>
+            <div class="add_product_addcommodity_goods_oper">操作</div>
+        </div>
+        <div class="add_product_addcommodity_temeplete" id="add_product_addcommodity_temeplete" style="display: none;">
+            <div class="add_product_addcommodity_goods_store">
+                <select class="add_product_addcommodity_goods_s">
+                    <option><--请选择--></option>
+                </select>
+            </div>
+            <div class="add_product_addcommodity_goods_price">
+                <input type="text">
+            </div>
+            <div class="add_product_addcommodity_goods_link">
+                <input type="text">
+            </div>
+            <div class="add_product_addcommodity_goods_sort">
+                <input type="text">
+            </div>
+            <div class="add_product_addcommodity_goods_dis"><a href="javascript:;"></a></div>
+            <div class="add_product_addcommodity_goods_oper">
+                <a class="add_product_addcommodity_goods_del"  href="javascript:;">删除</a>
+            </div>
+        </div>
+        <a href="javascript:;" id="add_product_addcommodity_goods_del"></a>
+        <a href="javascript:;" id="add_product_addcommodity_goods_build">新建行</a>
+        <a href="javascript:;" id="add_product_addcommodity_goods_submit">提交</a>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+打开桌面新窗口
+    top.O2O.openNewWindow({
+        title:"",        @param,  str
+        url:"",          @param,  str
+        width:"",        @param,  int
+        height:""        @param,  int
+    })
+
+
+数据验证
+    $.checkInputs({
+          inputs:[
+               {
+                    id:"test",                              //要检查的input的id
+                    name:"用户名",                           //要检查的input的名字（信息提示用）
+                    rules:"must,username,min:6,max:16",     //验证规则，见 rules 对象
+                    error:"用户名格式错误"                     //（非必须）自定义错误提示
+              },
+              ...
+          ],
+          success:function(){
+                  //验证通过回调
+                      console.log("ok")
+          },
+          error:function(msg,ids){
+                  //返回验证错误的文字
+                     console.log(msg)
+          }
+    })
+
+
+显示隐藏  load
+    $.loadShow()
+    $.loadHide()
+
+
+滚动加载
+    $.scrollLoadInterval({
+        scrollObj:$("#div"),            //要滚动的div，不传为window滚动  @param:jqobj
+        mainDiv:$("body"),              //要添加数据的容器       @param:jqobj
+        buttonLength:100,               //距离底部多长触发加载    @param:int
+        getDataApiName:"testScrollLoad",//调用数据的api接口名    @param:str
+        bindDataFn:b,                   //数据绑定函数(返回数据)  @param:function
+        scrollForKey:"BrandId",         //翻页需要传递的参数id    @param:str
+        searchData:{                    //查询条件的json
+            searchText:"123"
+        }
+    });
+
+
+图片上传
+window.abc = new $.uploadFile({
+        id:"file",                  //input[type='file']的 id   @param:str
+        formId:"form",              //表单id                     @param:str
+        types:"jpg,jpeg,png",       //上传文件类型                @param:str
+        maxNumber:5,                //最大能上传好多张图片          @param:int
+                                    //服务器地址                  @param:str
+        serverSrc:top.AJAX.fileUploadUrl,
+        showImageWrapId:"ddd",      //图片上传完后显示区域id        @param:str
+        imgs:[]                     //已存在的图片                 @param:array
+    });
+
+
+
+富文本编辑器
+需要先挂载-------------------------------
+<link rel="stylesheet" href="../../doc_edit/themes/default/default.css" />
+<script charset="utf-8" src="../../doc_edit/kindeditor-min.js"></script>
+<script charset="utf-8" src="../../doc_edit/lang/zh_CN.js"></script>
+
+
+执行:
+注意::::
+//textarea 的name赋值为 content
+//参数不用改
+var editor;
+KindEditor.ready(function(K) {
+    editor = K.create('textarea[name="content"]', {
+        height:"300px",
+        items:[ 'source', '|', 'undo', 'redo', '|', 'preview', 'cut', 'copy', 'paste',
+            'plainpaste', 'wordpaste', '|', 'justifyleft', 'justifycenter', 'justifyright',
+            'justifyfull', 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'subscript',
+            'superscript', 'clearhtml', 'quickformat', 'selectall', '|', 'fullscreen', '/',
+            'formatblock', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold',
+            'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat', '|', 'image', 'table', 'hr', 'emoticons', 'baidumap', 'pagebreak',
+            'anchor', 'link', 'unlink']
+    });
+
+    editor.html('<h3>asdfasdf</h3>');   //初始赋值
+});
+
+取数据方法
+editor.html();
+
+
+
+
+
+获取地址栏的参数
+$.getUrlParam("type");   //返回123;
+
+eg:http://www.safdasdfas.com?type="123"
+
+
+
+
+
+
+日历控件
+需要先挂载-------------------------------
+<link rel="stylesheet" href="../../datepicker/jquery-ui-1.10.4.custom.min.css" />
+<script src="../../datepicker/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+
+
+//直接复制  改id及可
+$("#order_manange_search_val").datepicker({
+            dateFormat: "yy-mm-dd",
+            minDate: "-10Y",
+            maxDate: "0Y",
+            changeMonth: true,
+            changeYear: true,
+            yearRange: 'c-60:c+60'
+        });
+

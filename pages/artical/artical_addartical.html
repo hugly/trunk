@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>添加文章页面</title>
+    <link rel="stylesheet" type="text/css" href="artical_addartical.css">
+    <link rel="stylesheet" type="text/css" href="../../css/all.css">
+    <script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="../../js/jq.extend.js"></script>
+    <script type="text/javascript" src="artical_addartical.js"></script>
+    <link rel="stylesheet" href="../../doc_edit/themes/default/default.css" />
+    <script charset="utf-8" src="../../doc_edit/kindeditor-min.js"></script>
+    <script charset="utf-8" src="../../doc_edit/lang/zh_CN.js"></script>
+</head>
+<body>
+<!--添加文章页面-->
+<div class="artical_addartical" id="artical_addartical">
+    <div class="artical_addartical_infro">
+        <!--分类-->
+        <div class="artical_addartical_infro_type">
+            <span>所属分类:</span>
+            <select id="artical_addartical_infro_type">
+                <option><--请选择--></option>
+            </select>
+            <em>*</em>
+        </div>
+        <div class="artical_addartical_infro_category">
+            <span>主题:</span>
+            <input type="text" class="artical_addartical_infro_goods" id="artical_addartical_infro_goods" name="主题">
+            <em>*</em>
+            <input type="checkbox" class="artical_addartical_infro_check" id="artical_addartical_infro_check">
+            <i>是否立即发布</i>
+        </div>
+        <p>限制在60个字符以内</p>
+        <!--搜索-->
+        <div class="artical_addartical_infro_name">
+            <span>搜索描述:</span>
+            <input type="text" id="artical_addartical_infro_name">
+        </div>
+        <div class="artical_addartical_infro_code">
+            <span>文章关键字:</span>
+            <input type="text" id="artical_addartical_infro_article_code">
+        </div>
+        <div class="artical_addartical_infro_code">
+            <span>搜索关键字:</span>
+            <input type="text" id="artical_addartical_infro_code">
+        </div>
+    </div>
+    <!--图片和描述-->
+    <div class="artical_addartical_pic">
+        <!--文章图片-->
+        <div class="artical_addartical_pic_goods">
+            <span>文章图片:</span>
+            <div class="artical_addartical_pic_goods_list" id="artical_addartical_pic_goods_list"></div>
+            <form id="artical_addartical_pic_goods">
+                  <input type="file" id="artical_addartical_pic_goods_list_up" name="file">
+            </form>
+        </div>
+        <!--摘要-->
+        <div class="artical_addartical_goods_intro">
+            <span>摘要:</span>
+            <textarea id="artical_addartical_goods_intro"></textarea>
+            <p>文章摘要的长度限制在800个字符以内,建议删除hmtl标签.</p>
+        </div>
+        <!--商品描述-->
+        <p class="artical_addartical_zhaiyao">如果你要为某些关键词添加到当前文章内链地址，只需在插入超链接中的URL地址框填写＃即可。注意：＃前无需添加http://.</p>
+        <div class="artical_addartical_goods_desc">
+            <span class="artical_addartical_goods_desc_span">内容:</span>
+            <textarea id="artical_addartical_goods_desc" name="content"></textarea>
+            <em>*  文章内容必填！</em>
+        </div>
+    </div>
+    <div class="artical_addartical_save">
+        <a href="javascript:;">确定</a>
+    </div>
+</div>
+</body>
+</html>

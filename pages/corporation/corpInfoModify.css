@@ -1,0 +1,104 @@
+.artical_addartical{
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+.artical_addartical_infro{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.artical_addartical_save{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+.artical_addartical_save a{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    background: #09f;
+    padding: 0 20px;
+    text-align: center;
+    color: #fff;
+    margin-left: 300px;
+    font-size: 14px;
+}
+.artical_addartical_infro_category,
+.artical_addartical_pic_goods,
+.artical_addartical_infro_name,
+.artical_addartical_infro_code{
+    width: 100%;
+    position: relative;
+    margin: 5px 0;
+    overflow: hidden;
+}
+.artical_addartical_infro_category span,
+.artical_addartical_pic_goods span,
+.artical_addartical_infro_name span,
+.artical_addartical_infro_code span{
+    float: left;
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+    font-size: 14px;
+    margin-right: 5px;
+}
+.artical_addartical_infro_category input,
+.artical_addartical_infro_name input,
+.artical_addartical_infro_code input{
+    float: left;
+    font-size: 14px;
+    width: 280px;
+    height: 12px;
+    line-height: 12px;
+    padding: 6px 10px;
+}
+.artical_addartical_infro_category em,#form_CorpLogoId em{
+    display: inline-block;
+    color: #f00;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 5px;
+}
+.artical_addartical_infro_category i,
+.artical_addartical_infro_code i{
+    display: block;
+    float: left;
+    width: 80%;
+    font-size: 10px;
+    padding-left: 155px;
+    font-style: normal;
+    color: #999;
+}
+#form_CorpLogoId i{
+    display: block;
+    float: left;
+    width: 80%;
+    font-size: 10px;
+    font-style: normal;
+    color: #999;
+}
+.artical_addartical_infro_category select{
+    width: 100px;
+    margin-top: 5px;
+}
+.artical_addartical_pic_goods_list{
+    float: left;
+    width: 640px;
+    margin-left: 30px;
+}
+#form_CorpLogoId{
+    float: left;
+    margin-left: 140px;
+}
+.artical_addartical_infro_code a{
+    height: 30px;
+    line-height: 30px;
+    margin-left: 5px;
+    color: #09f;
+}

@@ -1,0 +1,56 @@
+.product_nav{ width: 100%; height: 30px; position: relative; background: #333; margin-bottom: 10px;}
+.product_nav ul{ padding: 0px 10px; position: relative; overflow: hidden;}
+.product_nav ul li{ float: left; position: relative; display: block; cursor: pointer; height: 28px; margin: 1px;}
+.product_nav ul li:hover{ background: #fff;}
+.product_nav ul li:hover a{ color: #09f;}
+.product_nav ul li.active{ background: #fff;}
+.product_nav ul li.active a{ color: #09f;}
+.product_nav ul li a{ color: #fff; padding: 1px 12px; height: 26px; line-height: 26px; display: block; font-size: 14px; }
+
+
+.product_brandlist{ width: 780px; height: auto; margin:10px;}
+
+.add_product_brandlist{ width: 100%; height: 30px; position: relative;}
+.add_product_brandlist a{float: right; padding-right: 5px; display:inline-block; height: 30px; line-height: 30px; padding-left: 20px; background:url("image/add-row.gif") no-repeat 0 6px;}
+
+.search_product_brandlist{ width: 100%; height: 30px; position: relative; margin: 10px 0;}
+.search_product_brandlist_search{ width: 400px; height: 30px; line-height: 30px; position: relative; float: left;}
+.search_product_brandlist_search span{ font-size: 12px;}
+.search_product_brandlist_search input{ font-size: 12px; width: 160px; height: 12px; line-height: 12px; padding: 6px;}
+.search_product_brandlist_search a{ display: inline-block; width: 60px; height: 14px; line-height: 14px; padding: 7px; font-size: 14px; background: #f00; color: #fff; text-align: center;}
+
+.search_product_brandlist_sort{ width: auto; height: 30px; line-height: 30px; position: relative; float: right;}
+.search_product_brandlist_sort a{ width: auto; height: 30px; line-height: 30px; font-size: 14px; padding: 0px 10px; background:#ff0000; color: #fff; display: inline-block;}
+
+
+.product_brandlist_list{ width: 778px; height: auto; position: relative;}
+.product_brandlist_detail:nth-child(odd){ background: #dde7f3;}
+.product_brandlist_title{ width: 100%; height: 32px; line-height: 32px; position: relative; border: 1px solid #AEB2BA;background: #F4F4F4;}
+.product_brandlist_detail{ width: 100%; height: 60px; line-height: 60px; position: relative; border: 1px solid #AEB2BA; margin-top: -1px;}
+
+.product_brandlist_logo{  float: left; width: 200px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
+.product_brandlist_sort{  float: left; width: 150px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
+.product_brandlist_sort input{ width: 60%; height: 12px; line-height: 12px; padding: 4px;}
+
+.product_brandlist_name{
+    float: left; width: 228px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
+.product_brandlist_name span{display: block; width: 90%; padding: 0 5%; height:60px; line-height: 60px; white-space:nowrap;overflow:hidden;text-overflow:ellipsis; text-align: left;}
+.product_brandlist_oper{
+    float: left; width: 197px; text-align: center;}
+.product_brandlist_detail_edit{ display: inline-block; height: 30px; line-height: 30px; padding-left: 20px; background: url("image/edit.png") no-repeat 0 7px;}
+.product_brandlist_detail_del{ display: inline-block; height: 30px; line-height: 30px; padding-left: 20px; margin-left: 20px;  background: url("image/delete.gif") no-repeat 0 7px;}
+
+.add_product_brandlist_con{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #000; opacity: 0.6; filter:alpha(opacity=60); display: none; }
+.add_product_brandlist_list{ width: 360px; height: 320px; background: #fff; position: absolute; left: 50%; top: 50%; margin-left: -230px; margin-top: -200px; padding: 40px 50px; display: none;}
+.add_product_brandlist_namdiv,.add_product_brandlist_icondiv,.add_product_brandlist_introdiv{ width: 100%; height: auto; position: relative; overflow: hidden; margin-bottom: 20px;}
+.add_product_brandlist_namdiv span,.add_product_brandlist_icondiv span,.add_product_brandlist_introdiv span{float: left; font-size: 14px; display: inline-block; width: 80px; height: 30px; line-height: 30px; text-align: left;}
+.add_product_brandlist_namdiv em{float: left; color: #f00; height: 30px; line-height: 30px; margin-left: 5px;}
+.add_product_brandlist_namdiv input{float: left; font-size: 14px; width: 200px; height: 12px; line-height: 20px; padding: 4px 10px; margin-top: 3px;}
+.add_product_brandlist_namdiv p,.add_product_brandlist_introdiv p{float: left; padding-left: 80px; margin-top: 5px;}
+
+.add_product_brandlist_icondiv input{ float: left; height: 20px; line-height: 20px; padding: 5px;}
+.add_product_brandlist_introdiv textarea{ width: 260px; height: 70px; float: left; margin-top: 5px;}
+
+.add_product_brandlist_list a{ display: inline-block; width: 100px; height: 40px; line-height: 40px; text-align: center; background: #09f; color: #fff; font-size: 16px; margin-left: 130px; margin-top: 20px;}
+#add_product_brandlist_del{ width: 16px; height: 16px; display: inline-block; background: url("image/cancel.png") no-repeat 0 0; position: absolute; top: -15px; right: 5px;}
+

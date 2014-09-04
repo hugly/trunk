@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>商家管理系统</title>
+        <link type="text/css" rel="stylesheet" href="css/css.css"/>
+        <link type="text/css" rel="stylesheet" href="css/jquery.tool.css"/>
+        <link type="text/css" rel="stylesheet" href="css/login.css"/>
+        <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.tool.js"></script>
+        <script type="text/javascript" src="js/jq.extend.js"></script>
+        <!--图标文件-->
+        <script type="text/javascript" src="js/shortcut.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/o2o.js"></script>
+        <script type="text/javascript">
+            //$(document.body).append('<div class="bgloader" style="background:url(img/ui/loader.gif) no-repeat #fff center;z-index:10000;position:absolute;top:0;left:0;width:100%;height:100%"></div>');
+            $(document).ready(function(){
+                //IE下禁止选中
+//                document.body.onselectstart = document.body.ondrag = function(){return false;}
+                //初始化
+
+            });
+        </script>
+        <!--[if lte IE 8]>
+        <noscript>
+        <style>
+        #task-bar,#desk{display:none!important}
+		.ie-noscript-warning{background:rgb(255,255,225)  no-repeat scroll 8px center;position:absolute;top:0;left:0;font-size:12px;color:#333;width:98%; padding: 2px 15px 2px 23px; text-align:left; z-index:99;} 
+        </style>
+        <div class="ie-noscript-warning">您的浏览器禁用了脚本，请设置您的浏览器之后继续访问<div>
+        </noscript>
+        <![endif]-->
+        <!--[if lte IE 6]>
+        <style type="text/css"> 
+        #ie6-warning{background:rgb(255,255,225) no-repeat scroll 8px center;text-align: center;position:absolute;margin: 0 auto;color:#333;width:96%; padding: 2px 15px 2px 23px; z-index:99;} 
+        #ie6-warning a {text-decoration:none;color:#000; } 
+        </style> 
+        <div id="ie6-warning">您正在使用 Internet Explorer 6，在本页面的显示效果可能有差异。建议您升级到 <a href="http://www.microsoft.com/china/windows/internet-explorer/" target="_blank">Internet Explorer 8</a> 或以下浏览器： <a href="http://www.mozillaonline.com/">Firefox</a> / <a href="http://www.google.com/chrome/?hl=zh-CN">Chrome</a> / <a href="http://www.apple.com.cn/safari/">Safari</a> / <a href="http://www.operachina.com/">Opera</a>
+        </div>
+        <script type="text/javascript">
+        function position_fixed(el, eltop, elleft){  
+		   // check if this is IE6  
+		   if(!window.XMLHttpRequest)  
+				window.onscroll = function(){  
+					el.style.top = (document.documentElement.scrollTop + eltop)+"px";  
+					el.style.left = (document.documentElement.scrollLeft + elleft)+"px";  
+		   }  
+		   else el.style.position = "fixed";  
+        }
+        position_fixed(document.getElementById("ie6-warning"),0, 0);
+        </script>
+        <![endif]-->
+    </head>
+    <body id="lxcn" >
+        <div id="main">
+            <div class="logo_title"></div>
+            <div class="login">
+                <form class="logo_info">
+                    <div class="login_jg"></div>
+                    <input value="www" class="text1 mar_b txt" id="login_username"  name="login_user_name" type="text" placeholder="用户名" />
+                    <input value="123456" class="text2 mar_b txt" id="login_user_password"  name="password" type="password" placeholder="密码" />
+                    <div id="login_err_message" class="login_err_message"></div>
+                    <div id="login_loading" class="login_loading">
+                        <img src="image/loading_s.gif" />
+                        <span>登录中,请稍候！</span>
+                    </div>
+                    <div class="login_btn" id="login_submit">登 录</div>
+                </form>
+            </div>
+        </div>
+        <div id="desktop" style="display:none; width:100%; height:100%;">
+            <img style="width: 100%;height: 100%; position: absolute; left: 0; top: 0;" src="images/background.jpg"/>
+            <div id="task-bar">
+                <ul class="task-window">
+                </ul>
+                <ul class="task-panel">
+                    <li class="sys" title="注 销"><b class="">注 销</b></li>
+                </ul>
+            </div>
+            <div id="desk">
+                <ul></ul>
+            </div>
+        </div>
+    </body>
+</html>

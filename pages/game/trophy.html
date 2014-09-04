@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>奖品管理</title>
+    <link rel="stylesheet" href="../../css/all.css">
+    <link rel="stylesheet" href="trophy.css">
+    <link rel="stylesheet" href="../../doc_edit/themes/default/default.css" />
+    <script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="../../js/jq.extend.js"></script>
+    <script type="text/javascript" src="../../js/create_list.js"></script>
+    <script type="text/javascript" src="trophy.js"></script>
+    <script charset="utf-8" src="../../doc_edit/kindeditor-min.js"></script>
+    <script charset="utf-8" src="../../doc_edit/lang/zh_CN.js"></script>
+    <script type="text/javascript" src="../../js/create_input.js"></script>
+</head>
+<body>
+<div class="game_nav">
+    <ul>
+        <li class="active"><a href="javascript:;">奖品管理</a></li>
+        <li><a href="award_records.html">游戏奖励记录</a></li>
+        <li><a href="number_management.html">游戏次数管理</a></li>
+    </ul>
+</div>
+<div class="game_list" id="game_list">
+    <div class="add_game_list"><a href="javascript:;" id="add_game_list">添加游戏奖励</a> </div>
+    <div class="search_game_list">
+        <div class="search_game_list_search">
+            <span>所属游戏:</span>
+            <select id="belongsGame"></select>
+            <span>奖励类型:</span>
+            <select id="awardType"></select>
+            <span>奖品状态:</span>
+            <select id="awardState">
+                <option value="-1">所有</option>
+                <option value="0">无效</option>
+                <option value="1">有效</option>
+            </select>
+            <span>列表显示:</span>
+            <select id="listDisplay">
+                <option value="-1">所有</option>
+                <option value="0">不显示</option>
+                <option value="1">显示</option>
+            </select>
+            <a href="javascript:;" id="search_game_query">查询</a>
+        </div>
+    </div>
+    <div class="game_list_layer" id="game_list_layer">
+
+    </div>
+</div>
+<div class="add_game_list_temp" id="add_game_list_temp" style="display: none;"></div>
+</body>
+</html>

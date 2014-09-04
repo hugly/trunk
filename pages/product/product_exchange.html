@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../css/all.css">
+    <link rel="stylesheet" href="product_exchange.css">
+    <link rel="stylesheet" href="../../doc_edit/themes/default/default.css" />
+    <script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="../../js/jq.extend.js"></script>
+    <script type="text/javascript" src="../../js/create_list.js"></script>
+    <script type="text/javascript" src="product_exchange.js"></script>
+    <script charset="utf-8" src="../../doc_edit/kindeditor-min.js"></script>
+    <script charset="utf-8" src="../../doc_edit/lang/zh_CN.js"></script>
+    <script type="text/javascript" src="../../js/create_input.js"></script>
+</head>
+<body>
+<div class="product_nav">
+    <ul>
+        <li><a href="product_commodity.html">商品</a></li>
+        <li><a href="product_levellist.html">商品等级</a></li>
+        <li><a href="product_contrast.html">比价商家</a></li>
+        <li><a href="product_review.html;">商品评论</a></li>
+        <li><a href="product_classification.html">分类管理</a></li>
+        <li class="active"><a href="javascript:;">兑换商品管理</a></li>
+    </ul>
+</div>
+<div class="product_exchange" id="product_exchange">
+    <div class="add_product_exchange"><a href="javascript:;" id="add_product_exchange">添加可兑换商品</a> </div>
+    <div class="search_product_exchange">
+        <div class="search_product_exchange_search">
+            <span>商品名称:</span>
+            <input class="search_product_exchange_search_pro" type="text">
+            <a href="javascript:;" id="search_product_query">查询</a>
+        </div>
+    </div>
+    <div class="product_exchange_layer" id="product_exchange_layer">
+
+    </div>
+</div>
+<div class="add_product_exchange_temp" id="add_product_exchange_temp" style="display: none;"></div>
+
+</body>
+</html>

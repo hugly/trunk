@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <title>轮换管理</title>
+    <link rel="stylesheet" type="text/css" href="../../css/data-grid.css">
+    <link rel="stylesheet" type="text/css" href="../../css/all.css">
+    <script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="../../js/jq.extend.js"></script>
+    <script type="text/javascript" src="../../js/data-grid.js"></script>
+</head>
+<body>
+    <div class="data-grid" data-ajax-url="CarouselMgt/GetList" data-key="carouselId" data-scroll="true" data-method="get">
+        <div class="headr-bar"><a ajax-window="true" class="btn btn-add" data-url="/pages/carousel/carousel_add.html" title="添加轮换信息" data-width="850" data-height="600" href="javascript:;">添加轮换信息</a> </div>
+        <div class="search-bar">
+            <span>轮换标题:</span>
+            <input class="search-box" name="queryKey" type="text" value="test">
+            <a href="javascript:;" class="btn-search">查询</a>
+        </div>
+        <div class="data-table">
+            <div class="data-header">
+                <div class="row-column span01">序号</div>
+                <div class="row-column span03 left"><span>轮换标题</span></div>
+                <div class="row-column span02">图片</div>
+                <div class="row-column span02">开始时间</div>
+                <div class="row-column span02">结束时间</div>
+                <div class="row-column span02">操作</div>
+            </div>
+            <div class="data-row">
+                <div class="row-column span01" data-field="CarouselOrder">序号</div>
+                <div class="row-column span03 left" data-field="Title">轮换标题</div>
+                <div class="row-column span02" data-field="upload.UploadPath" data-type="image">图片</div>
+                <div class="row-column span02" data-field="CarouselStartTime" data-type="date" data-format="yyyy-MM-dd">开始时间</div>
+                <div class="row-column span02" data-field="CarouselEndTime" data-type="date" data-format="yyyy-MM-dd">结束时间</div>
+                <div class="row-column span02">
+                    <a class="btn btn-edit" ajax-window="true" data-url="/pages/carousel/carousel_add.html?id={CarouselID}" title="编辑轮换信息" data-width="850" data-height="600" href="javascript:;">编辑</a>
+                    <a class="btn btn-del" ajax-delete="true" data-url="CarouselMgt/Delete?CarouselId={CarouselID}" ajax-method="get" title="删除轮换信息" href="javascript:;">删除</a>
+                </div>
+            </div>
+        </div>
+    </div>
+ </body>
+</html>

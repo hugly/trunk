@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="product_review.css">
+    <link rel="stylesheet" type="text/css" href="../../css/all.css">
+    <script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="../../js/jq.extend.js"></script>
+    <script type="text/javascript" src="product_review.js"></script>
+</head>
+<body>
+<div class="product_nav">
+    <ul>
+        <li><a href="product_commodity.html">商品</a></li>
+        <li><a href="product_levellist.html">商品等级</a></li>
+        <li><a href="product_contrast.html">比价商家</a></li>
+        <li class="active"><a href="javascript:;">商品评论</a></li>
+        <li><a href="product_classification.html">分类管理</a></li>
+        <li><a href="product_exchange.html">兑换商品管理</a></li>
+    </ul>
+</div>
+<div class="product_review">
+    <div class="search_product_review">
+        <div class="search_product_review_search">
+            <span>关键字查询:</span>
+            <input class="search_product_review_search_pro" id="search_product_review_search_pro" type="text">
+            <!--<span>用户名称:</span>-->
+            <!--<input class="search_product_review_search_code" type="text">-->
+            <a href="javascript:;" id="search_product_review_search">查询</a>
+        </div>
+    </div>
+    <div class="product_review_list" id="product_review_title">
+        <div class="product_review_title">
+            <div class="product_review_reid">评论ID</div>
+            <div class="prodcut_review_content">评论内容</div>
+            <div class="product_review_proname">商品名称</div>
+            <div class="product_review_username">用户名称</div>
+            <!--<div class="product_review_state">显示状态</div>-->
+            <div class="product_review_disdetail" style="padding: 0;">评论图片</div>
+            <div class="product_review_score">评分</div>
+            <div class="product_review_data">评论时间</div>
+            <div class="product_review_change">状态更改</div>
+        </div>
+        <div class="product_review_detail" id="product_review_template" style="display:none;">
+            <div class="product_review_reid"><span></span></div>
+            <div class="prodcut_review_content"><span></span></div>
+            <div class="product_review_proname"><span></span></div>
+            <div class="product_review_username"><span></span></div>
+            <!--<div class="product_review_state"><span>显示</span></div>-->
+            <div class="product_review_disdetail"></div>
+            <div class="product_review_score"><span></span></div>
+            <div class="product_review_data"><span></span></div>
+            <div class="product_review_change"><a href="javascript:;"></a></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

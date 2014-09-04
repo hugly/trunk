@@ -1,0 +1,32 @@
+.panic_index{ width: 780px; height: auto; margin:10px;}
+
+.add_panic_index{ width: 100%; height: 30px; position: relative;}
+.add_panic_index a{float: right; padding-right: 5px; display:inline-block; height: 30px; line-height: 30px; padding-left: 20px; background:url("image/add-row.gif") no-repeat 0 6px;}
+
+.search_panic_index{ width: 100%; height: 30px; position: relative; margin: 10px 0;}
+.search_panic_index_search{ width: 100%; height: 30px; line-height: 30px; position: relative; float: left;}
+.search_panic_index_search span{ font-size: 12px; margin-right: 10px;}
+.search_panic_index_search input{ font-size: 12px; width: 160px; height: 12px; line-height: 12px; padding: 6px; margin-right: 10px;}
+.search_panic_index_search a{ display: inline-block; width: 60px; height: 14px; line-height: 14px; padding: 7px; font-size: 14px; background: #f00; color: #fff; text-align: center;}
+
+.panic_index_list{ width: 778px; height: auto; position: relative;}
+.panic_index_detail:nth-child(odd){ background: #dde7f3;}
+.panic_index_title{ width: 100%; height: 32px; line-height: 32px; position: relative; border: 1px solid #AEB2BA;background: #F4F4F4;}
+.panic_index_detail{ width: 100%; height: 42px; line-height: 42px; position: relative; border: 1px solid #AEB2BA; margin-top: -1px;}
+
+.panic_index_select{ float: left; width: 30px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
+.panic_index_select input{ text-align: center; }
+
+.panic_index_begintime{float: left; width: 155px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
+
+.panic_index_endtime{float: left; width: 155px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
+.panic_index_amount{float: left; width: 55px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
+.panic_index_balance{float: left; width: 55px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
+.panic_index_isdiscount{float: left; width: 55px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
+
+
+.panic_index_name{float: left; width: 165px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
+.panic_index_begintime span,.panic_index_name a,.panic_index_endtime span,.panic_index_amount span,.panic_index_balance span,panic_index.porduct_commodity_isdiscount span{ display: block; width: 90%; padding: 0 5%; height:42px; line-height: 42px; white-space:nowrap;overflow:hidden;text-overflow:ellipsis; text-align: left; }
+.panic_index_oper{float: left; width: 100px; text-align: center;}
+.panic_index_detail_edit{ display: inline-block; height: 30px; line-height: 30px; padding-left: 18px;background: url("image/edit.png") no-repeat 0 7px;}
+.panic_index_detail_del{ display: inline-block; height: 30px; line-height: 30px; padding-left: 18px; margin-left: 0px;  background: url("image/delete.gif") no-repeat 0 7px;}

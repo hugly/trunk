@@ -1,0 +1,120 @@
+.artical_nav{ width: 100%; height: 30px; position: relative; background: #333; margin-bottom: 10px;}
+.artical_nav ul{ padding: 0px 10px; position: relative; overflow: hidden;}
+.artical_nav ul li{ float: left; position: relative; display: block; cursor: pointer; height: 28px; margin: 1px;}
+.artical_nav ul li.active{background: #fff;}
+.artical_nav ul li.active a{ color: #09f;}
+.artical_nav ul li:hover{ background: #fff;}
+.artical_nav ul li:hover a{ color: #09f;}
+.artical_nav ul li a{ color: #fff; padding: 1px 12px; height: 26px; line-height: 26px; display: block; font-size: 14px; }
+
+.artical_review{ width: 580px; height: auto; margin:10px 40px;}
+
+.add_artical_review{ width: 100%; height: 30px; position: relative;}
+.add_artical_review a{float: right; padding-right: 5px; display:inline-block; height: 30px; line-height: 30px; padding-left: 20px; background:url("image/add-row.gif") no-repeat 0 6px;}
+
+.search_artical_review{ width: 100%; height: 30px; position: relative; margin: 10px 0;}
+.search_artical_review_search{ width: 100%; height: 30px; line-height: 30px; position: relative; float: left;}
+.search_artical_review_search span{ font-size: 12px; margin-right: 10px;}
+.search_artical_review_search input{ font-size: 12px; width: 140px; height: 12px; line-height: 12px; padding: 6px; margin-right: 10px;}
+.search_artical_review_search a{ display: inline-block; width: 60px; height: 14px; line-height: 14px; padding: 7px; font-size: 14px; background: #f00; color: #fff; text-align: center;}
+
+.artical_review_list{ width: 578px; height: auto; position: relative;}
+.artical_review_detail:nth-child(odd){ background: #dde7f3;}
+.artical_review_title{ width: 100%; height: 32px; line-height: 32px; position: relative; border: 1px solid #AEB2BA;background: #F4F4F4;}
+.artical_review_detail{ width: 100%; height: 42px; line-height: 42px; position: relative; border: 1px solid #AEB2BA; margin-top: -1px;}
+
+.artical_review_reivewid{ float: left; width: 50px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
+
+.artical_review_reviewtitle{float: left; width: 150px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
+
+.artical_review_content{
+    float: left;
+    width: 282px;
+    border-right: 1px solid #AEB2BA;
+    text-align: center;
+    position: relative;
+}
+.artical_review_username{
+    float: left;
+    width: 162px;
+    border-right: 1px solid #AEB2BA;
+    text-align: center;
+    position: relative;
+}
+.artical_review_display{
+    float: left;
+    width: 80px;
+    text-align: center;
+    position: relative;
+}
+.artical_review_reviewdetail{
+    float: left;
+    width: 80px;
+    text-align: center;
+    position: relative;
+}
+.artical_review_display a{
+    display: block;
+    width: 90%;
+    padding: 0 5%;
+    height:42px;
+    line-height: 42px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    text-align: center;
+}
+.artical_review_username a,.artical_review_reviewtitle a,.artical_review_reivewid span,.artical_review_content span,.artical_review_username span{
+    display: block;
+    width: 90%;
+    padding: 0 5%;
+    height:42px;
+    line-height: 42px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    text-align: left;
+}
+
+.add_artical_review_con{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.6;
+    filter:alpha(opacity=60);
+    display: none;
+}
+.add_artical_review_list{
+    width: 360px;
+    height: 320px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -230px;
+    margin-top: -200px;
+    padding: 40px 50px;
+    display: none;
+}
+.add_artical_review_namdiv,.add_artical_review_icondiv,.add_artical_review_introdiv{ width: 100%; height: auto; position: relative; overflow: hidden; margin-bottom: 20px;}
+.add_artical_review_namdiv span,.add_artical_review_icondiv span,.add_artical_review_introdiv span{float: left; font-size: 14px; display: inline-block; width: 80px; height: 30px; line-height: 30px; text-align: left;}
+
+.add_artical_review_icondiv select,.add_artical_review_namdiv select{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 5px;
+}
+
+.add_artical_review_introdiv em{float: right; color: #f00; height: 30px; line-height: 30px; }
+.add_artical_review_introdiv p{float: left; padding-left: 80px; margin-top: 5px;}
+.add_artical_review_icondiv p{ float: left; height:30px; line-height:30px; margin-left: 10px;}
+
+.add_artical_review_icondiv input{ float: left; width: 40px; height: 16px; line-height: 16px; padding: 4px; font-size: 12px;}
+.add_artical_review_introdiv textarea{ width: 260px; height: 70px; float: left; margin-top: 5px;}
+
+.add_artical_review_list a{ display: inline-block; width: 80px; height: 30px; line-height: 30px; text-align: center; background: #09f; color: #fff; font-size: 16px; margin-left: 130px; margin-top: 20px;}
+#add_artical_review_del{ width: 16px; height: 16px; display: inline-block; background: url("image/cancel.png") no-repeat 0 0; position: absolute; top: -15px; right: 5px;}

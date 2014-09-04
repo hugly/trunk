@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="listall.css"/>
+    <link rel="stylesheet" type="text/css" href="order_all.css">
+    <script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="../../js/jq.extend.js"></script>
+    <script type="text/javascript" src="order_manage_discount.js" charset="gb2312"></script>
+</head>
+<body>
+<!--头部导航-->
+<div class="order_manange_hang">
+    <a href="order_management.html" class="order_manange_hang_list">订单管理</a>
+    <a href="order_manage_discount.html" class="order_manange_hang_list order_manange_hang_list_select">打折码管理</a>
+    <a href="order_manage_coupon.html" class="order_manange_hang_list">优惠券管理</a>
+</div>
+
+<div class="list_discount">
+    <div class="list_lb_top_title">
+        <span class="txt_list">打折码:</span>
+        <input type="text" class="input_list"/>
+        <input type="submit" class="input_search" value="查询"/>
+    </div>
+    <div class="list_discount_info">
+        <div class="list_discount_title">
+            <div class="list_discount_bg list_dis2">商家名称</div>
+            <div class="list_discount_bg list_dis3">商品名称</div>
+            <div class="list_discount_bg list_dis4">打折码</div>
+            <div class="list_discount_bg list_dis5">生成时间</div>
+            <div class="list_discount_bg list_dis6">生成用户</div>           
+            <div class="list_discount_bg list_dis8">状态</div>
+            <div class="list_discount_bg list_dis9">操作</div>
+            <div class="clear"></div>
+        </div>
+        <div class="list_disrow" style="display: none;" id="div_clonedata">
+            <input fieldname="DiscountId" type="hidden" />
+            <div class="list_discount_bg list_dis2" fieldname="CompanyName">sdasdasd</div>
+            <div class="list_discount_bg list_dis3" fieldname="ExchangeUrl" fielddisplayname="ProductName" fieldtype="link" fieldformat="{ExchangeUrl}">51活动优惠劵</div>
+            <div class="list_discount_bg list_dis4" fieldname="DiscountCode">***********</div>
+            <div class="list_discount_bg list_dis5" fieldname="DiscounCreateTime" fieldtype="datetime">2014-06-16</div>
+            <div class="list_discount_bg list_dis6" fieldname="UserName">geek007@live.com</div>
+            <div class="list_discount_bg list_dis8" fieldname="DiscountStatus" fieldtype="bool">未使用</div>
+            <div class="list_discount_bg list_dis9">
+                <a class="list_detail_del" href="javascript:;">删除</a>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+</body>
+</html>

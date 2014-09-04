@@ -1,0 +1,28 @@
+.add_Subject_list{
+    width: 860px;
+    height: auto;
+    margin: 20px;
+}
+.add_subject_activity,.add_subject_template,.add_subject_static{
+    width: 100%;
+    height: auto;
+}
+.add_subject_dataLayer{
+    background: #F4F4F4;
+}
+#submit_add_subject_list_temp{
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #09f;
+    color: #fff;
+    display: block;
+    margin-left: 410px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.add_subject_newDiv{
+    margin-top: 20px;
+}

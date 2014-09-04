@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../css/all.css">
+    <link rel="stylesheet" type="text/css" href="order_all.css">
+    <link rel="stylesheet" href="order_management.css"/>
+
+    <script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="../../js/jq.extend.js"></script>
+    <script type="text/javascript" src="order_management.js"></script>
+    <script type="text/javascript" src="../../js/Area.js"></script>
+
+</head>
+<body>
+<!--头部导航-->
+<div class="order_manange_hang">
+    <a href="order_management.html" class="order_manange_hang_list order_manange_hang_list_select">订单管理</a>
+    <a href="order_manage_discount.html" class="order_manange_hang_list">打折码管理</a>
+    <a href="order_manage_coupon.html" class="order_manange_hang_list">优惠券管理</a>
+</div>
+
+
+
+<div class="order_manange">
+    <!--查询条件-->
+    <div class="list_lb_top_title">
+        <span class="txt_list">模糊查询:</span>
+        <input type="text" class="input_list" id="order_manange_search_val"/>
+        <span class="txt_list">订单类型:</span>
+        <select id="order_manange_search_type1">
+            <option value="0" selected>普通订单</option>
+            <option value="1">优惠劵订单</option>
+        </select>
+        <span class="txt_list">订单状态:</span>
+        <select id="order_manange_search_type">
+            <option value="0" selected>全部</option>
+            <option value="2">等待发货</option>
+            <option value="3">已发货</option>
+            <option value="5">成功订单</option>
+        </select>
+        <input type="button" class="input_search" id="order_manange_search" value="查询"/>
+    </div>
+
+
+    <div class="order_manange_main">
+        <div class="order_click_top">
+            <strong class="order_fonts" id="order_manange_export1">导出订单信息</strong>
+        </div>
+        <div class="order_click_down">
+            <strong class="order_fonts" id="order_manange_export2">导出快递单信息</strong>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+
+    <!--订单选项部分-->
+    <div class="order_manage_message" id="order_manange_info_export1" style="display: none;">
+        <strong>请选择需要导出的信息：</strong>
+
+        <div class="order_manage_ul">
+            <div class="clear" id="order_manage_ul_order"></div>
+        </div>
+        <strong>请选择导出格式：</strong>
+        <div class="order_format">
+            <div class="order_format_li">
+                <input type="radio" name="file_type1" value="csv" checked/>
+                <span>CSV格式</span>
+            </div>
+            <div class="order_format_li">
+                <input type="radio" name="file_type1" value="txt"/>
+                <span>TXT格式</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="order_btn" id="order_btn1">
+            <input type="button" id="order_manange_export_button1" class="order_input_btn" value="导出"/>
+        </div>
+        <br/>
+    </div>
+    <!--快递信息部分-->
+    <div class="order_manage_message" id="order_manange_info_export2" style="display: none;">
+        <strong>请选择需要导出的信息：</strong>
+
+        <div class="order_manage_ul">
+            <div class="clear" id="order_manage_ul_express"></div>
+        </div>
+        <strong>请选择导出格式：</strong>
+        <div class="order_format">
+            <div class="order_format_li">
+                <input type="radio" name="file_type" value="csv" checked />
+                <span>CSV格式</span>
+            </div>
+            <div class="order_format_li">
+                <input type="radio" name="file_type" value="txt"/>
+                <span>TXT格式</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="order_btn" id="order_btn">
+            <input type="button" id="order_manange_export_button2" class="order_input_btn" value="导出"/>
+        </div>
+        <br/>
+    </div>
+    <div class="order_manage_message_select_all">
+        全选:<input type="checkbox" id="list_all" /> <input id="send_out_all" class="order_manage_message_select_button" type="button" value="批量发货" />
+    </div>
+    <div class="order_manage_info" id="order_manage_info">
+        <div class="order_manage_info_title">
+            <div class="order_manage_bg order_list0">订单编号</div>
+            <div class="order_manage_bg order_list1">会员名</div>
+            <div class="order_manage_bg order_list2">收货人</div>
+            <div class="order_manage_bg order_list3">成交时间</div>
+            <div class="order_manage_bg order_list4">获得方式</div>
+            <div class="order_manage_bg order_list5">订单类型</div>
+            <div class="order_manage_bg order_list6">打印状态</div>
+            <div class="order_manage_bg order_list7">订单状态</div>
+            <div class="order_manage_bg order_list8">操作</div>
+        </div>
+    </div>
+</div>
+<br/><br/>
+<!--克隆对象-->
+<!--<div class="clone_hang_main" id="clone_hang_main" style="display: none;">-->
+
+<!--</div>-->
+
+<!--<div class="order_manage_odd" style="display: none;" id="order_manage_odd">-->
+    <!--<div class="order_manage_odd_li order_odd_list1">-->
+        <!--<input type="checkbox"/><span>订单编号:</span><span class="clone_no"></span>-->
+    <!--</div>-->
+    <!--<div class="order_manage_odd_li order_odd_list2">成交时间:<span class="clone_time"></span></div>-->
+    <!--<div class="order_manage_odd_li order_odd_list3">未打印</div>-->
+    <!--<div class="clear"></div>-->
+<!--</div>-->
+<div class="order_manage_even" style="display: none;" id="order_manage_even">
+    <div class="order_manage_even_bg order_list0 diandian"></div>
+    <div class="order_manage_even_bg order_list1 diandian"></div>
+    <div class="order_manage_even_bg order_list2 diandian"></div>
+    <div class="order_manage_even_bg order_list3 diandian"></div>
+    <div class="order_manage_even_bg order_list4 diandian"></div>
+    <div class="order_manage_even_bg order_list5 diandian"></div>
+    <div class="order_manage_even_bg order_list6 diandian"></div>
+    <div class="order_manage_even_bg order_list7 diandian"></div>
+    <div class="order_manage_even_bg order_list8 diandian">
+        <a class="order_list8_info" href="javascript:;">详情</a>
+        <a class="order_list8_send" href="javascript:;">发货</a>
+    </div>
+    <div class="clear"></div>
+</div>
+<!--隐藏窗口 批量发货-->
+<div class="send_all_main" id="send_all_main_1" style="display: none;">
+    <div class="send_all_top">
+        <span>配送方式:</span>
+        <select class="js_type1 js_type1_all"></select>
+        <input type="button" class="input_search js_type1_button" value="确定"/>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <span>物流公司:</span>
+        <select class="js_type2 js_type2_all"></select>
+        <input type="button" class="input_search js_type2_button" value="确定"/>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <span>起始发货单号:</span>
+        <input class="js_input" style="width: 100px" type="text" />
+        <input type="button" class="input_search js_type3_button" value="确定"/>
+    </div>
+
+    <div class="send_all_body_list send_all_body_list_title">
+        <div class="send_all_body_list1 diandian">订单编号</div>
+        <div class="send_all_body_list2 diandian">收货人</div>
+        <div class="send_all_body_list3 diandian">地区</div>
+        <div class="send_all_body_list4 diandian">详细地址</div>
+        <div class="send_all_body_list5 diandian">配送方式</div>
+        <div class="send_all_body_list6 diandian">物流公司</div>
+        <div class="send_all_body_list7 diandian">发货单号</div>
+    </div>
+    <div class="send_all_body">
+
+
+    </div>
+    <div class="send_all_bottom">
+        <div class="submit_button js_send_goods_submit">批量发货</div>
+    </div>
+</div>
+
+<!--批量发货克隆层-->
+<div class="send_all_body_list" id="send_all_body_list" style="display: none;">
+    <div class="send_all_body_list1 diandian"> </div>
+    <div class="send_all_body_list2 diandian"> </div>
+    <div class="send_all_body_list3 diandian"> </div>
+    <div class="send_all_body_list4 diandian"> </div>
+    <div class="send_all_body_list5 diandian"> </div>
+    <div class="send_all_body_list6 diandian"> </div>
+    <div class="send_all_body_list7 diandian"> </div>
+</div>
+
+
+
+
+<!--隐藏窗口 订单详情-->
+<div class="win_order_info" id="win_order_info" style="display: none;">
+    <div class="win_order_info_title">订单状态:<span>等待发货</span></div>
+
+    <div class="win_order_info_hang">订单详情</div>
+    <div class="win_order_info_item js_bind_code">编&nbsp;&nbsp;号:<span></span></div>
+    <div class="win_order_info_item js_bind_phone">联系电话:<span></span></div>
+    <div class="win_order_info_item js_bind_username">会&nbsp;&nbsp;员&nbsp;&nbsp;名:<span></span></div>
+    <div class="win_order_info_item js_bind_name">真实姓名:<span></span></div>
+    <div class="win_order_info_item js_bind_email">电子邮件:<span></span></div>
+    <div class="win_order_info_item js_bind_time1">订单时间:<span></span></div>
+
+    <div class="win_order_info_hang">商品列表</div>
+    <div class="win_order_info_item js_bind_product_img">商品图片:</div>
+    <div class="win_order_info_item js_bind_product_name">商品名称:<span></span></div>
+    <div class="win_order_info_item js_bind_product_number">购买数量:<span></span></div>
+    <div class="win_order_info_item hs_bind_product_f_number">发货数量:<span></span></div>
+
+    <div class="win_order_info_hang">物流信息</div>
+    <div class="win_order_info_item js_bind_send_gs">物流公司:<span></span></div>
+    <div class="win_order_info_item js_bind_send_area">省&nbsp;&nbsp;市&nbsp;&nbsp;区:<span></span></div>
+    <div class="win_order_info_item js_bind_send_address">收货地址:<span></span></div>
+    <div class="win_order_info_item js_bind_send_type">配送方式:<span></span></div>
+    <div class="win_order_info_item js_bind_send_code">运单号码:<span></span></div>
+    <div class="win_order_info_item js_bind_send_message">买家留言:<span></span></div>
+
+</div>
+
+
+
+<!--隐藏窗口 优惠劵订单发货-->
+<div class="send_goods_yhj" id="send_goods_yhj" style="display: none;">
+    <div class="send_goods_yhj_title">优惠劵发货</div>
+    <div class="send_goods_yhj_hang js_code">订单编号:<span></span></div>
+    <div class="send_goods_yhj_hang js_time">创建时间:<span></span></div>
+    <div class="send_goods_yhj_hang js_phone">接收的电话号码:<span></span></div>
+    <div class="send_goods_yhj_hang js_text">备注:<br/></div>
+    <input class="send_goods_yhj_button send_goods_yhj_button1" type="button" value="确认发货">
+</div>
+
+
+
+
+</body>
+</html>

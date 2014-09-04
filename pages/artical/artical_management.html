@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>文章管理</title>
+    <link rel="stylesheet" type="text/css" href="artical_management.css">
+    <link rel="stylesheet" type="text/css" href="../../css/all.css">
+    <script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="../../js/jq.extend.js"></script>
+    <script type="text/javascript" src="artical_management.js"></script>
+</head>
+<body>
+<div class="artical_nav">
+    <ul>
+        <li class="active"><a href="javascript:;">文章管理</a></li>
+        <li><a href="artical_review.html">资讯评论管理</a></li>
+        <li><a href="artical_Category.html">文章类别管理</a></li>
+    </ul>
+</div>
+
+<div class="artical_management">
+    <div class="add_artical_management"><a href="javascript:;" id="add_artical_management">添加新文章</a> </div>
+    <div class="search_artical_management">
+        <div class="search_artical_management_search">
+            <span>关键字:</span>
+            <input class="search_artical_management_search_pro" type="text">
+            <!--<span>商品编码:</span>-->
+            <!--<input class="search_artical_management_search_code" type="text" value="test">-->
+            <a href="javascript:;">查询</a>
+        </div>
+    </div>
+    <div class="artical_management_list" id="artical_management_title">
+        <div class="artical_management_title">
+            <div class="artical_management_select">选择</div>
+            <div class="artical_management_logo">图片</div>
+            <div class="artical_management_protype">文章分类</div>
+            <div class="artical_management_name">文章标题</div>
+            <div class="artical_management_release">显示状态</div>
+            <div class="artical_management_data">添加时间</div>
+            <div class="artical_management_oper">操作</div>
+        </div>
+        <div class="artical_management_detail" id="artical_management_template" style="display: none;">
+            <div class="artical_management_select"><input type="checkbox" class="artical_management_chose"></div>
+            <div class="artical_management_logo"><img class="artical_management_logo_img" src> </div>
+            <div class="artical_management_protype"><span></span></div>
+            <div class="artical_management_name"><a href="javascript:;"></a></div>
+            <div class="artical_management_release"><span></span></div>
+            <div class="artical_management_data"><span></span></div>
+            <div class="artical_management_oper"><a class="artical_management_detail_edit" href="javascript:;">编辑</a> <a class="artical_management_detail_del" href="javascript:;">删除</a> </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>商品品牌列表</title>
+    <link rel="stylesheet" type="text/css" href="product_brandlist.css">
+    <link rel="stylesheet" type="text/css" href="../../css/all.css">
+    <script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="../../js/jq.extend.js"></script>
+    <script type="text/javascript" src="product_brandlist.js"></script>
+</head>
+<body>
+<div class="product_nav">
+    <ul>
+        <li><a href="product_levellist.html">商品等级</a></li>
+        <li><a href="product_classification.html">分类管理</a></li>
+        <li class="active"><a href="javascript:;">品牌管理</a></li>
+        <li><a href="product_contrast.html">比价商家</a></li>
+        <li><a href="product_commodity.html">商品</a></li>
+        <li><a href="product_review.html">商品评论</a></li>
+        <li><a href="product_exchange.html">兑换商品管理</a></li>
+    </ul>
+</div>
+<div class="product_brandlist">
+    <div class="add_product_brandlist"><a href="javascript:;" id="add_product_brandlist">添加新品牌</a> </div>
+    <div class="search_product_brandlist">
+        <div class="search_product_brandlist_search">
+            <span>品牌名称：</span>
+            <input type="text">
+            <a href="javascript:;" id="search_product">查询</a>
+        </div>
+        <div class="search_product_brandlist_sort">
+            <a href="javascript:;">批量保存排序</a>
+        </div>
+    </div>
+    <div class="product_brandlist_list" id="product_brandlist_title">
+        <div class="product_brandlist_title">
+            <div class="product_brandlist_logo">品牌logo</div>
+            <div class="product_brandlist_name">品牌名称</div>
+            <div class="product_brandlist_sort">显示顺序</div>
+            <div class="product_brandlist_oper">操作</div>
+        </div>
+            <div class="product_brandlist_detail" id="product_brandlist_template" style="display: none;">
+                <div class="product_brandlist_logo"><img class="product_brandlist_logo_img" src> </div>
+                <div class="product_brandlist_name"><span></span></div>
+                <div class="product_brandlist_sort"><input class="product_brandlist_sort_index" type="text"></div>
+                <div class="product_brandlist_oper"><a class="product_brandlist_detail_edit" href="javascript:;">编辑</a> <a class="product_brandlist_detail_del" href="javascript:;">删除</a> </div>
+            </div>
+    </div>
+</div>
+<div class="add_product_brandlist_con" id="add_product_brandlist_con"></div>
+<div class="add_product_brandlist_list" id="add_product_brandlist_list">
+    <div class="add_product_brandlist_namdiv">
+        <span>分类名称：</span>
+        <input type="text" class="add_articalCategory_name">
+        <em>*</em>
+        <p class="add_product_brandlist_tip">分类名称不能为空，长度限制在60个字符以内</p>
+    </div>
+    <div class="add_product_brandlist_icondiv">
+        <span>分类图标：</span>
+        <input type="file" class="add_product_brandlist_icon">
+    </div>
+    <div class="add_product_brandlist_introdiv">
+        <span>分类介绍：</span>
+        <textarea class="add_product_brandlist_intro"></textarea>
+        <p class="add_product_brandlist_tip">分类名称不能为空，长度限制在60个字符以内</p>
+    </div>
+    <div class="add_product_brandlist_btn">
+        <a href="javascript:;" class="add_product_brandlist_list_add">添加</a>
+    </div>
+    <a href="javascript:;" id="add_product_brandlist_del"></a>
+</div>
+</body>
+</html>

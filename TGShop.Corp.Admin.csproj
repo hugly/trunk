@@ -1,0 +1,596 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AD4FDBFC-9B32-405B-B53A-D9483CED90FE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TGShop.Corp.Admin</RootNamespace>
+    <AssemblyName>TGShop.Corp.Admin</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>    
+    <Content Include="colorpicker\css\colorpicker.css" />
+    <Content Include="colorpicker\css\layout.css" />
+    <Content Include="colorpicker\images\blank.gif" />
+    <Content Include="colorpicker\images\colorpicker_background.png" />
+    <Content Include="colorpicker\images\colorpicker_hex.png" />
+    <Content Include="colorpicker\images\colorpicker_hsb_b.png" />
+    <Content Include="colorpicker\images\colorpicker_hsb_h.png" />
+    <Content Include="colorpicker\images\colorpicker_hsb_s.png" />
+    <Content Include="colorpicker\images\colorpicker_indic.gif" />
+    <Content Include="colorpicker\images\colorpicker_overlay.png" />
+    <Content Include="colorpicker\images\colorpicker_rgb_b.png" />
+    <Content Include="colorpicker\images\colorpicker_rgb_g.png" />
+    <Content Include="colorpicker\images\colorpicker_rgb_r.png" />
+    <Content Include="colorpicker\images\colorpicker_select.gif" />
+    <Content Include="colorpicker\images\colorpicker_submit.png" />
+    <Content Include="colorpicker\images\custom_background.png" />
+    <Content Include="colorpicker\images\custom_hex.png" />
+    <Content Include="colorpicker\images\custom_hsb_b.png" />
+    <Content Include="colorpicker\images\custom_hsb_h.png" />
+    <Content Include="colorpicker\images\custom_hsb_s.png" />
+    <Content Include="colorpicker\images\custom_indic.gif" />
+    <Content Include="colorpicker\images\custom_rgb_b.png" />
+    <Content Include="colorpicker\images\custom_rgb_g.png" />
+    <Content Include="colorpicker\images\custom_rgb_r.png" />
+    <Content Include="colorpicker\images\custom_submit.png" />
+    <Content Include="colorpicker\images\select.png" />
+    <Content Include="colorpicker\images\select2.png" />
+    <Content Include="colorpicker\images\slider.png" />
+    <Content Include="colorpicker\js\colorpicker.js" />
+    <Content Include="colorpicker\js\eye.js" />
+    <Content Include="colorpicker\js\jquery.js" />
+    <Content Include="colorpicker\js\layout.js" />
+    <Content Include="colorpicker\js\utils.js" />
+    <Content Include="css\all.css" />
+    <Content Include="css\colorpicker.css" />
+    <Content Include="css\css.css" />
+    <Content Include="css\data-grid.css" />
+    <Content Include="css\form.css" />
+    <Content Include="css\jquery.tool.css" />
+    <Content Include="css\login.css" />
+    <Content Include="datepicker\images\animated-overlay.gif" />
+    <Content Include="datepicker\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="datepicker\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="datepicker\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="datepicker\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="datepicker\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="datepicker\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="datepicker\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="datepicker\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="datepicker\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="datepicker\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="datepicker\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="datepicker\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="datepicker\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="datepicker\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="datepicker\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="datepicker\jquery-ui-1.10.4.custom.css" />
+    <Content Include="datepicker\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="datepicker\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="doc\ajax.js" />
+    <Content Include="doc_edit\asp.net\bin\LitJSON.dll" />
+    <Content Include="doc_edit\asp.net\demo.aspx" />
+    <Content Include="doc_edit\asp.net\README.txt" />
+    <Content Include="doc_edit\kindeditor-all-min.js" />
+    <Content Include="doc_edit\kindeditor-all.js" />
+    <Content Include="doc_edit\kindeditor-min.js" />
+    <Content Include="doc_edit\kindeditor.js" />
+    <Content Include="doc_edit\lang\ar.js" />
+    <Content Include="doc_edit\lang\en.js" />
+    <Content Include="doc_edit\lang\ko.js" />
+    <Content Include="doc_edit\lang\zh_CN.js" />
+    <Content Include="doc_edit\lang\zh_TW.js" />
+    <Content Include="doc_edit\plugins\anchor\anchor.js" />
+    <Content Include="doc_edit\plugins\autoheight\autoheight.js" />
+    <Content Include="doc_edit\plugins\baidumap\baidumap.js" />
+    <Content Include="doc_edit\plugins\baidumap\index.html" />
+    <Content Include="doc_edit\plugins\baidumap\map.html" />
+    <Content Include="doc_edit\plugins\clearhtml\clearhtml.js" />
+    <Content Include="doc_edit\plugins\code\code.js" />
+    <Content Include="doc_edit\plugins\code\prettify.css" />
+    <Content Include="doc_edit\plugins\code\prettify.js" />
+    <Content Include="doc_edit\plugins\emoticons\emoticons.js" />
+    <Content Include="doc_edit\plugins\emoticons\images\0.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\1.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\10.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\100.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\101.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\102.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\103.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\104.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\105.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\106.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\107.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\108.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\109.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\11.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\110.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\111.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\112.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\113.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\114.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\115.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\116.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\117.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\118.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\119.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\12.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\120.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\121.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\122.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\123.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\124.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\125.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\126.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\127.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\128.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\129.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\13.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\130.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\131.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\132.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\133.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\134.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\14.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\15.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\16.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\17.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\18.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\19.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\2.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\20.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\21.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\22.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\23.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\24.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\25.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\26.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\27.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\28.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\29.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\3.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\30.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\31.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\32.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\33.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\34.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\35.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\36.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\37.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\38.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\39.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\4.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\40.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\41.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\42.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\43.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\44.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\45.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\46.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\47.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\48.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\49.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\5.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\50.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\51.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\52.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\53.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\54.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\55.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\56.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\57.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\58.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\59.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\6.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\60.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\61.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\62.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\63.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\64.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\65.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\66.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\67.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\68.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\69.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\7.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\70.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\71.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\72.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\73.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\74.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\75.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\76.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\77.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\78.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\79.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\8.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\80.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\81.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\82.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\83.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\84.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\85.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\86.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\87.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\88.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\89.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\9.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\90.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\91.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\92.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\93.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\94.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\95.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\96.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\97.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\98.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\99.gif" />
+    <Content Include="doc_edit\plugins\emoticons\images\static.gif" />
+    <Content Include="doc_edit\plugins\filemanager\filemanager.js" />
+    <Content Include="doc_edit\plugins\filemanager\images\file-16.gif" />
+    <Content Include="doc_edit\plugins\filemanager\images\file-64.gif" />
+    <Content Include="doc_edit\plugins\filemanager\images\folder-16.gif" />
+    <Content Include="doc_edit\plugins\filemanager\images\folder-64.gif" />
+    <Content Include="doc_edit\plugins\filemanager\images\go-up.gif" />
+    <Content Include="doc_edit\plugins\flash\flash.js" />
+    <Content Include="doc_edit\plugins\image\image.js" />
+    <Content Include="doc_edit\plugins\image\images\align_left.gif" />
+    <Content Include="doc_edit\plugins\image\images\align_right.gif" />
+    <Content Include="doc_edit\plugins\image\images\align_top.gif" />
+    <Content Include="doc_edit\plugins\image\images\refresh.png" />
+    <Content Include="doc_edit\plugins\insertfile\insertfile.js" />
+    <Content Include="doc_edit\plugins\lineheight\lineheight.js" />
+    <Content Include="doc_edit\plugins\link\link.js" />
+    <Content Include="doc_edit\plugins\map\map.html" />
+    <Content Include="doc_edit\plugins\map\map.js" />
+    <Content Include="doc_edit\plugins\media\media.js" />
+    <Content Include="doc_edit\plugins\multiimage\images\image.png" />
+    <Content Include="doc_edit\plugins\multiimage\images\select-files-en.png" />
+    <Content Include="doc_edit\plugins\multiimage\images\select-files-zh_CN.png" />
+    <Content Include="doc_edit\plugins\multiimage\images\swfupload.swf" />
+    <Content Include="doc_edit\plugins\multiimage\multiimage.js" />
+    <Content Include="doc_edit\plugins\pagebreak\pagebreak.js" />
+    <Content Include="doc_edit\plugins\plainpaste\plainpaste.js" />
+    <Content Include="doc_edit\plugins\preview\preview.js" />
+    <Content Include="doc_edit\plugins\quickformat\quickformat.js" />
+    <Content Include="doc_edit\plugins\table\table.js" />
+    <Content Include="doc_edit\plugins\template\html\1.html" />
+    <Content Include="doc_edit\plugins\template\html\2.html" />
+    <Content Include="doc_edit\plugins\template\html\3.html" />
+    <Content Include="doc_edit\plugins\template\template.js" />
+    <Content Include="doc_edit\plugins\wordpaste\wordpaste.js" />
+    <Content Include="doc_edit\themes\common\anchor.gif" />
+    <Content Include="doc_edit\themes\common\blank.gif" />
+    <Content Include="doc_edit\themes\common\flash.gif" />
+    <Content Include="doc_edit\themes\common\loading.gif" />
+    <Content Include="doc_edit\themes\common\media.gif" />
+    <Content Include="doc_edit\themes\common\rm.gif" />
+    <Content Include="doc_edit\themes\default\background.png" />
+    <Content Include="doc_edit\themes\default\default.css" />
+    <Content Include="doc_edit\themes\default\default.png" />
+    <Content Include="doc_edit\themes\qq\editor.gif" />
+    <Content Include="doc_edit\themes\qq\qq.css" />
+    <Content Include="doc_edit\themes\simple\simple.css" />
+    <Content Include="Global.asax" />
+    <Content Include="images\Artical.png" />
+    <Content Include="images\background.jpg" />
+    <Content Include="images\background2.jpg" />
+    <Content Include="images\Businesses.png" />
+    <Content Include="images\desktop_spr_x.png" />
+    <Content Include="images\frame_handle.gif" />
+    <Content Include="images\gb_tip_layer.png" />
+    <Content Include="images\icos\Artical.png" />
+    <Content Include="images\icos\bus.png" />
+    <Content Include="images\icos\Businesses.png" />
+    <Content Include="images\icos\gmail.png" />
+    <Content Include="images\icos\ku6.png" />
+    <Content Include="images\icos\kuaidi.png" />
+    <Content Include="images\icos\lieche.png" />
+    <Content Include="images\icos\logo.jpg" />
+    <Content Include="images\icos\mail.png" />
+    <Content Include="images\icos\management_bg.jpg" />
+    <Content Include="images\icos\news.png" />
+    <Content Include="images\icos\news_1.png" />
+    <Content Include="images\icos\Order.png" />
+    <Content Include="images\icos\Panic.png" />
+    <Content Include="images\icos\Product.png" />
+    <Content Include="images\icos\qq.jpg" />
+    <Content Include="images\icos\Rotation.png" />
+    <Content Include="images\icos\son.png" />
+    <Content Include="images\icos\souhu.png" />
+    <Content Include="images\icos\Thumbs.db" />
+    <Content Include="images\icos\xiaohua.png" />
+    <Content Include="images\icos\youku.png" />
+    <Content Include="images\management_bg.jpg" />
+    <Content Include="images\news.png" />
+    <Content Include="images\Order.png" />
+    <Content Include="images\Panic.png" />
+    <Content Include="images\portal_all_png.png" />
+    <Content Include="images\Product.png" />
+    <Content Include="images\Rotation.png" />
+    <Content Include="images\sprite_main_png.png" />
+    <Content Include="images\Thumbs.db" />
+    <Content Include="images\titlebar_bg_cur.png" />
+    <Content Include="images\transparent.gif" />
+    <Content Include="image\add-row.gif" />
+    <Content Include="image\bg.jpg" />
+    <Content Include="image\blank.gif" />
+    <Content Include="image\block.png" />
+    <Content Include="image\calender.png" />
+    <Content Include="image\cancel.png" />
+    <Content Include="image\colorpicker_background.png" />
+    <Content Include="image\colorpicker_hex.png" />
+    <Content Include="image\colorpicker_hsb_b.png" />
+    <Content Include="image\colorpicker_hsb_h.png" />
+    <Content Include="image\colorpicker_hsb_s.png" />
+    <Content Include="image\colorpicker_indic.gif" />
+    <Content Include="image\colorpicker_overlay.png" />
+    <Content Include="image\colorpicker_rgb_b.png" />
+    <Content Include="image\colorpicker_rgb_g.png" />
+    <Content Include="image\colorpicker_rgb_r.png" />
+    <Content Include="image\colorpicker_select.gif" />
+    <Content Include="image\colorpicker_submit.png" />
+    <Content Include="image\custom_background.png" />
+    <Content Include="image\custom_hex.png" />
+    <Content Include="image\custom_hsb_b.png" />
+    <Content Include="image\custom_hsb_h.png" />
+    <Content Include="image\custom_hsb_s.png" />
+    <Content Include="image\custom_indic.gif" />
+    <Content Include="image\custom_rgb_b.png" />
+    <Content Include="image\custom_rgb_g.png" />
+    <Content Include="image\custom_rgb_r.png" />
+    <Content Include="image\custom_submit.png" />
+    <Content Include="image\delete.gif" />
+    <Content Include="image\edit.png" />
+    <Content Include="image\hover-btn.png" />
+    <Content Include="image\load.gif" />
+    <Content Include="image\loading_s.gif" />
+    <Content Include="image\lock.png" />
+    <Content Include="image\login.png" />
+    <Content Include="image\login_btn.png" />
+    <Content Include="image\logo.png" />
+    <Content Include="image\select.png" />
+    <Content Include="image\select2.png" />
+    <Content Include="image\slider.png" />
+    <Content Include="image\transparent.png" />
+    <Content Include="image\txtbox_1.png" />
+    <Content Include="image\txtbox_2.png" />
+    <Content Include="image\txtbox_3.png" />
+    <Content Include="image\user.png" />
+    <Content Include="image\yzm.png" />
+    <Content Include="image\хИЧшби.png" />
+    <Content Include="image\чЩ╗х╜Х.png" />
+    <Content Include="index.html" />
+    <Content Include="js\Area.js" />
+    <Content Include="js\colorpicker.js" />
+    <Content Include="js\create_input.js" />
+    <Content Include="js\create_list.js" />
+    <Content Include="js\data-grid.js" />
+    <Content Include="js\form.js" />
+    <Content Include="js\index.js" />
+    <Content Include="js\jq.extend.js" />
+    <Content Include="js\jquery-1.6.2.min.js" />
+    <Content Include="js\jquery.tool.js" />
+    <Content Include="js\o2o.js" />
+    <Content Include="js\region.xml" />
+    <Content Include="js\shortcut.js" />
+    <Content Include="pages\artical\artical_addartical.css" />
+    <Content Include="pages\artical\artical_addartical.html" />
+    <Content Include="pages\artical\artical_addartical.js" />
+    <Content Include="pages\artical\artical_Category.css" />
+    <Content Include="pages\artical\artical_Category.html" />
+    <Content Include="pages\artical\artical_Category.js" />
+    <Content Include="pages\artical\artical_management.css" />
+    <Content Include="pages\artical\artical_management.html" />
+    <Content Include="pages\artical\artical_management.js" />
+    <Content Include="pages\artical\artical_review.css" />
+    <Content Include="pages\artical\artical_review.html" />
+    <Content Include="pages\artical\artical_review.js" />
+    <Content Include="pages\artical\image\add-row.gif" />
+    <Content Include="pages\artical\image\cancel.png" />
+    <Content Include="pages\artical\image\delete.gif" />
+    <Content Include="pages\artical\image\edit.png" />
+    <Content Include="pages\carousel\carousel_add.html" />
+    <Content Include="pages\carousel\carousel_add.js" />
+    <Content Include="pages\carousel\carousel_index.html" />
+    <Content Include="pages\corporation\corpInfoModify.css" />
+    <Content Include="pages\corporation\corpInfoModify.html" />
+    <Content Include="pages\corporation\corpInfoModify.js" />
+    <Content Include="pages\game\award_records.css" />
+    <Content Include="pages\game\award_records.html" />
+    <Content Include="pages\game\award_records.js" />
+    <Content Include="pages\game\number_management.css" />
+    <Content Include="pages\game\number_management.html" />
+    <Content Include="pages\game\number_management.js" />
+    <Content Include="pages\game\trophy.css" />
+    <Content Include="pages\game\trophy.html" />
+    <Content Include="pages\game\trophy.js" />
+    <Content Include="pages\member\user_infromation.css" />
+    <Content Include="pages\member\user_infromation.html" />
+    <Content Include="pages\member\user_infromation.js" />
+    <Content Include="pages\member\user_ingegral.css" />
+    <Content Include="pages\member\user_ingegral.html" />
+    <Content Include="pages\member\user_ingegral.js" />
+    <Content Include="pages\order\order_coupon.css" />
+    <Content Include="pages\order\order_coupon.html" />
+    <Content Include="pages\order\order_coupon.js" />
+    <Content Include="pages\order\order_discount.css" />
+    <Content Include="pages\order\order_discount.html" />
+    <Content Include="pages\order\order_discount.js" />
+    <Content Include="pages\order_management\image\01.gif" />
+    <Content Include="pages\order_management\image\icon.gif" />
+    <Content Include="pages\order_management\image\im.jpg" />
+    <Content Include="pages\order_management\image\next.gif" />
+    <Content Include="pages\order_management\image\top.gif" />
+    <Content Include="pages\order_management\image\WebResource.png" />
+    <Content Include="pages\order_management\listall.css" />
+    <Content Include="pages\order_management\order_all.css" />
+    <Content Include="pages\order_management\order_management.css" />
+    <Content Include="pages\order_management\order_management.html" />
+    <Content Include="pages\order_management\order_management.js" />
+    <Content Include="pages\order_management\order_manage_coupon.css" />
+    <Content Include="pages\order_management\order_manage_coupon.html" />
+    <Content Include="pages\order_management\order_manage_coupon.js" />
+    <Content Include="pages\order_management\order_manage_discount.html" />
+    <Content Include="pages\order_management\order_manage_discount.js" />
+    <Content Include="pages\panic\image\add-row.gif" />
+    <Content Include="pages\panic\image\cancel.png" />
+    <Content Include="pages\panic\image\delete.gif" />
+    <Content Include="pages\panic\image\edit.png" />
+    <Content Include="pages\panic\panic_add.css" />
+    <Content Include="pages\panic\panic_add.html" />
+    <Content Include="pages\panic\panic_add.js" />
+    <Content Include="pages\panic\panic_index.css" />
+    <Content Include="pages\panic\panic_index.html" />
+    <Content Include="pages\panic\panic_index.js" />
+    <Content Include="pages\product\image\add-row.gif" />
+    <Content Include="pages\product\image\apply.png" />
+    <Content Include="pages\product\image\back.png" />
+    <Content Include="pages\product\image\cancel.png" />
+    <Content Include="pages\product\image\delete.gif" />
+    <Content Include="pages\product\image\edit.png" />
+    <Content Include="pages\product\image\go.png" />
+    <Content Include="pages\product\product_addcommodity.css" />
+    <Content Include="pages\product\product_addcommodity.html" />
+    <Content Include="pages\product\product_addcommodity.js" />
+    <Content Include="pages\product\product_brandlist.css" />
+    <Content Include="pages\product\product_brandlist.html" />
+    <Content Include="pages\product\product_brandlist.js" />
+    <Content Include="pages\product\product_classification.css" />
+    <Content Include="pages\product\product_classification.html" />
+    <Content Include="pages\product\product_classification.js" />
+    <Content Include="pages\product\product_commodity.css" />
+    <Content Include="pages\product\product_commodity.html" />
+    <Content Include="pages\product\product_commodity.js" />
+    <Content Include="pages\product\product_contrast.css" />
+    <Content Include="pages\product\product_contrast.html" />
+    <Content Include="pages\product\product_contrast.js" />
+    <Content Include="pages\product\product_inforAboutProduct.css" />
+    <Content Include="pages\product\product_inforAboutProduct.html" />
+    <Content Include="pages\product\product_inforAboutProduct.js" />
+    <Content Include="pages\product\product_levellist.css" />
+    <Content Include="pages\product\product_levellist.html" />
+    <Content Include="pages\product\product_levellist.js" />
+    <Content Include="pages\product\product_review.css" />
+    <Content Include="pages\product\product_review.html" />
+    <Content Include="pages\product\product_review.js" />
+    <Content Include="pages\rule\images\add-row.gif" />
+    <Content Include="pages\rule\images\apply.png" />
+    <Content Include="pages\rule\images\cancel.png" />
+    <Content Include="pages\rule\images\delete.gif" />
+    <Content Include="pages\rule\images\edit.png" />
+    <Content Include="pages\rule\rule_list.css" />
+    <Content Include="pages\rule\rule_list.html" />
+    <Content Include="pages\rule\rule_list.js" />
+    <Content Include="pages\subject\add_Subject_list.css" />
+    <Content Include="pages\subject\add_Subject_list.html" />
+    <Content Include="pages\subject\add_Subject_list.js" />
+    <Content Include="pages\subject\images\add-row.gif" />
+    <Content Include="pages\subject\images\apply.png" />
+    <Content Include="pages\subject\images\back.png" />
+    <Content Include="pages\subject\images\cancel.png" />
+    <Content Include="pages\subject\images\delete.gif" />
+    <Content Include="pages\subject\images\edit.png" />
+    <Content Include="pages\subject\images\go.png" />
+    <Content Include="pages\subject\subject_list.css" />
+    <Content Include="pages\subject\subject_list.html" />
+    <Content Include="pages\subject\subject_list.js" />
+    <Content Include="pages\subject\test.html" />
+    <Content Include="pages\subject\test.js" />
+    <Content Include="pages\test\test.html" />
+    <Content Include="pages\test\test.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="doc\api.text" />
+    <Content Include="doc_edit\asp.net\file_manager_json.ashx" />
+    <Content Include="doc_edit\asp.net\upload_json.ashx" />
+    <Content Include="colorpicker\images\Thumbs.db" />
+    <None Include="Properties\PublishProfiles\Publish.SVN.TGShop.Corp.Admin.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="pages\advisory\" />
+    <Folder Include="pages\game\images\" />
+    <Folder Include="pages\member\images\" />
+    <Folder Include="pages\order\image\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>10276</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8025</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

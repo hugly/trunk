@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>商品等级管理</title>
+    <link rel="stylesheet" type="text/css" href="product_levellist.css">
+    <link rel="stylesheet" type="text/css" href="../../css/all.css">
+    <script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="../../js/jq.extend.js"></script>
+    <script type="text/javascript" src="product_levellist.js"></script>
+</head>
+<body>
+<div class="product_nav">
+    <ul>
+        <li><a href="product_commodity.html">商品</a></li>
+        <li class="active"><a href="javascript:;">商品等级</a></li>
+        <li><a href="product_contrast.html">比价商家</a></li>
+        <li><a href="product_review.html">商品评论</a></li>
+        <li><a href="product_classification.html">分类管理</a></li>
+        <li><a href="product_exchange.html">兑换商品管理</a></li>
+    </ul>
+</div>
+<div class="product_levellist">
+    <div class="add_product_levellist"><a href="javascript:;" id="add_product_levellist">添加商品分级</a> </div>
+    <!--<div class="search_product_levellist">-->
+        <!--<div class="search_product_levellist_search">-->
+            <!--<span>品牌分级名称：</span>-->
+            <!--<input type="text" value="test">-->
+            <!--<a href="javascript:;">查询</a>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="product_levellist_list" id="product_levellist_title">
+        <div class="product_levellist_title">
+            <div class="product_levellist_name">商品分级名称</div>
+            <div class="product_levellist_logo">商品分级icon</div>
+            <div class="product_levellist_sort">商品等级排序</div>
+            <div class="product_levellist_dis">是否显示</div>
+            <div class="product_levellist_oper">操作</div>
+        </div>
+        <div class="product_levellist_detail" id="product_levellist_template" style="display: none;">
+            <div class="product_levellist_name"><span></span></div>
+            <div class="product_levellist_logo"><img class="product_levellist_logo_img" src></div>
+            <div class="product_levellist_sort"><span></span></div>
+            <div class="product_levellist_dis"><a href="javascript:;"></a> </div>
+            <div class="product_levellist_oper"><a class="product_levellist_detail_edit" href="javascript:;">编辑</a> <a class="product_levellist_detail_del" href="javascript:;">删除</a> </div>
+        </div>
+    </div>
+</div>
+<div class="add_product_levellist_con" id="add_product_levellist_con" style="display: none"></div>
+<div class="add_product_levellist_list" id="add_product_levellist_list" style="display: none">
+    <div class="add_product_levellist_namdiv">
+        <span>商品等级名称：</span>
+        <input type="text" class="add_articalCategory_name">
+        <em>*</em>
+        <p class="add_product_levellist_tip">商品等级名称不能为空，长度限制在1-20个字符之间</p>
+    </div>
+    <div class="add_product_levellist_sort">
+        <span>等级排序顺序：</span>
+        <input type="text" class="add_articalCategory_sort">
+        <em>*</em>
+        <p class="add_product_levellist_tip">需为数字，长度限制在2个字符之间</p>
+    </div>
+    <div class="add_product_levellist_icondiv">
+        <span>分类图标：</span>
+        <div id="add_product_levellist_div"></div>
+        <form id="add_product_levellist_form">
+            <input type="file" class="add_product_levellist_icon" id="add_product_levellist_icon" name="add_product_levellist">
+        </form>
+    </div>
+    <div class="add_product_levellist_introdiv">
+        <span>分类介绍：</span>
+        <textarea class="add_product_levellist_intro"></textarea>
+        <p class="add_product_levellist_tip">分类名称不能为空，长度限制在60个字符以内</p>
+    </div>
+    <div class="add_product_levellist_btn">
+        <a href="javascript:;" class="add_product_levellist_list_add">添加</a>
+    </div>
+    <a href="javascript:;" id="add_product_levellist_del"></a>
+</div>
+</body>
+</html>

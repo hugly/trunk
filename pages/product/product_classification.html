@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>商品分类管理</title>
+    <link rel="stylesheet" type="text/css" href="product_classification.css">
+    <link rel="stylesheet" type="text/css" href="../../css/all.css">
+    <script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="../../js/jq.extend.js"></script>
+    <script type="text/javascript" src="product_classification.js"></script>
+</head>
+<body>
+<div class="product_nav">
+    <ul>
+        <li><a href="product_commodity.html">商品</a></li>
+        <li><a href="product_levellist.html">商品等级</a></li>
+        <li><a href="product_contrast.html">比价商家</a></li>
+        <li><a href="product_review.html">商品评论</a></li>
+        <li class="active"><a href="javascript:;">分类管理</a></li>
+        <li><a href="product_exchange.html">兑换商品管理</a></li>
+    </ul>
+</div>
+<div class="product_classification">
+    <div class="add_product_classification"><a href="javascript:;" id="add_product_classification">添加新分类</a> </div>
+    <div class="product_classification_list" id="product_classification_title">
+        <div class="product_classification_title">
+            <div class="product_classification_name">分类名称</div>
+            <div class="product_classification_sort">排序</div>
+            <div class="product_classification_dis">是否显示</div>
+            <div class="product_classification_oper">操作</div>
+        </div>
+        <div class="product_classification_detail" id="product_classification_template" style="display: none;">
+            <div class="product_classification_name"><span></span></div>
+            <div class="product_classification_sort"><input type="text" value="1"></div>
+            <div class="product_classification_dis"><a href="javascript:;"></a></div>
+            <div class="product_classification_oper"><a class="product_classification_detail_edit" href="javascript:;">编辑</a> <a class="product_classification_detail_del" href="javascript:;">删除</a> </div>
+        </div>
+    </div>
+</div>
+<div class="add_product_classification_con" id="add_product_classification_con"></div>
+<div class="add_product_classification_list" id="add_product_classification_list" style="display: none;">
+    <div class="add_product_classification_namdiv">
+        <span>分类名称：</span>
+        <input type="text" class="add_articalCategory_name">
+        <em>*</em>
+        <p class="add_product_classification_tip">分类名称不能为空，在1至60个字符之间</p>
+    </div>
+    <div class="add_product_classification_btn">
+        <a href="javascript:;" class="add_product_classification_list_add">确定</a>
+        <a href="javascript:;" class="add_product_classification_list_addcon">保存并继续添加</a>
+    </div>
+    <a href="javascript:;" id="add_product_classification_del"></a>
+</div>
+
+<!--<div class="add_product_classification_prelevel">-->
+    <!--<span>选择上级分类：</span>-->
+    <!--<select id="add_product_classification_prelevel">-->
+        <!--<option>test1</option>-->
+        <!--<option>test2</option>-->
+        <!--<option>test3</option>-->
+    <!--</select>-->
+<!--</div>-->
+<!--<div class="add_product_classification_protype">-->
+    <!--<span>商品类型：</span>-->
+    <!--<select id="add_product_classification_protype">-->
+        <!--<option>test1</option>-->
+        <!--<option>test2</option>-->
+        <!--<option>test3</option>-->
+    <!--</select>-->
+<!--</div>-->
+</body>
+</html>

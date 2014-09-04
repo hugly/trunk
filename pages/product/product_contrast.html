@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>比价商家</title>
+    <link rel="stylesheet" type="text/css" href="product_contrast.css">
+    <link rel="stylesheet" type="text/css" href="../../css/all.css">
+    <script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="../../js/jq.extend.js"></script>
+    <script type="text/javascript" src="product_contrast.js"></script>
+</head>
+<body>
+<div class="product_nav">
+    <ul>
+        <li><a href="product_commodity.html">商品</a></li>
+        <li><a href="product_levellist.html">商品等级</a></li>
+        <li class="active"><a href="javascript:;">比价商家</a></li>
+        <li><a href="product_review.html">商品评论</a></li>
+        <li><a href="product_classification.html">分类管理</a></li>
+        <li><a href="product_exchange.html">兑换商品管理</a></li>
+    </ul>
+</div>
+
+<div class="product_contrast">
+    <div class="add_product_contrast"><a href="javascript:;" id="add_product_contrast">添加对比商家</a> </div>
+    <div class="search_product_contrast">
+        <div class="search_product_contrast_search">
+            <span>对比商家名称：</span>
+            <input type="text">
+            <a href="javascript:;" id="search_product_query">查询</a>
+        </div>
+    </div>
+    <div class="product_contrast_list" id="product_contrast_title">
+        <div class="product_contrast_title">
+            <div class="product_contrast_name">商家名称</div>
+            <div class="product_contrast_logo">商家图标</div>
+            <div class="product_contrast_link">商家链接</div>
+            <div class="product_contrast_display">是否显示</div>
+            <div class="porduct_contrast_createtime">创建时间</div>
+            <div class="product_contrast_oper">操作</div>
+        </div>
+        <div class="product_contrast_detail" id="product_contrast_template"  style="display: none;">
+            <div class="product_contrast_name"><span></span></div>
+            <div class="product_contrast_logo"><img class="product_contrast_logo_img" src></div>
+            <div class="product_contrast_link"><span></span></div>
+            <div class="product_contrast_display"><a href="javascript:;"></a></div>
+            <div class="porduct_contrast_createtime"><span></span></div>
+            <div class="product_contrast_oper"><a class="product_contrast_detail_edit" href="javascript:;">编辑</a> <a class="product_contrast_detail_del" href="javascript:;">删除</a> </div>
+        </div>
+    </div>
+</div>
+<div class="add_product_contrast_con" id="add_product_contrast_con"></div>
+<div class="add_product_contrast_list" id="add_product_contrast_list" style="display: none;">
+    <div class="add_product_contrast_namdiv">
+        <span>商家名称:</span>
+        <em>*</em>
+        <input type="text" class="add_product_contrast_name">
+        <p class="add_product_contrast_tip">商家名称不能为空，长度限制在10个字符之间</p>
+    </div>
+    <div class="add_product_contrast_icondiv">
+        <span>商家标图logo:</span>
+        <div id="add_product_contrast_layer"></div>
+        <form id="add_product_contrast_form">
+            <input type="file" id="add_product_contrast_icon" name="uploadimg">
+        </form>
+        <p class="add_product_contrast_tip">请上传一张用户等级展示图(长宽约为1:1，建议30*30).图片小于500k，图片格式请上传：.jpg,.png</p>
+    </div>
+    <div class="add_product_contrast_namdiv">
+        <span>商家官方地址:</span>
+        <input type="text" class="add_product_contrast_addressname">
+        <p class="add_product_contrast_tip">商家官方网站的地址必须以http://开头，长度限制在100个字符以内。</p>
+    </div>
+    <div class="add_product_contrast_isdis">
+        <span>是否显示:</span>
+        <input type="radio" class="dis"><em>显示</em>
+        <input type="radio" class="redis"><em>不显示</em>
+    </div>
+    <div class="add_product_contrast_btn">
+        <a href="javascript:;" class="add_product_contrast_list_add">确定</a>
+    </div>
+    <a href="javascript:;" id="add_product_contrast_del"></a>
+</div>
+</body>
+</html>

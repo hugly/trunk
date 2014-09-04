@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="utf-8" />
+    <title>添加限时抢购活动</title>
+    <link rel="stylesheet" type="text/css" href="panic_add.css">
+    <link rel="stylesheet" type="text/css" href="../../css/all.css">
+    <link rel="stylesheet" href="../../datepicker/jquery-ui-1.10.4.custom.min.css" />
+    <script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="../../js/jq.extend.js"></script>
+    <script src="../../datepicker/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="panic_add.js"></script>
+</head>
+<body>
+<div class="panic_add">
+    <!--查询部分-->
+    <div class="panic_check">
+        <span>商品名称/编码：</span>
+        <input type="text" name="ProductName" class="panic_add_proname">
+        <select name="Category">
+            <option>--请选择商品类型--</option>
+        </select>
+        <a href="javascript:;" class="btn-search">查询</a>
+    </div>
+    <!--商品选择和日期选择-->
+    <div class="panic_data">
+        <div class="panic_selectpro">
+            <span>限时抢购商品：</span>
+            <select name="ProductId">
+                <option>--请选择商品--</option>
+            </select>
+            <p>限时抢购商品</p>
+        </div>
+        <div class="panic_time" id="panic_begintime">
+            <span>开始日期：</span>
+            <em>*</em>
+            <input name="StartDate" type="datetime">
+            <select name="StartHour">
+                <option value="0">0时</option>
+                <option value="1">1时</option>
+                <option value="2">2时</option>
+                <option value="3">3时</option>
+                <option value="4">4时</option>
+                <option value="5">5时</option>
+                <option value="6">6时</option>
+                <option value="7">7时</option>
+                <option value="8">8时</option>
+                <option value="9">9时</option>
+                <option value="10">10时</option>
+                <option value="11">11时</option>
+                <option value="12">12时</option>
+                <option value="13">13时</option>
+                <option value="14">14时</option>
+                <option value="15">15时</option>
+                <option value="16">16时</option>
+                <option value="17">17时</option>
+                <option value="18">18时</option>
+                <option value="19">19时</option>
+                <option value="20">20时</option>
+                <option value="21">21时</option>
+                <option value="22">22时</option>
+                <option value="23">23时</option>
+            </select>
+            <select name="StartMinute">
+                <option value="0">0分</option>
+                <option value="1">1分</option>
+                <option value="2">2分</option>
+                <option value="3">3分</option>
+                <option value="4">4分</option>
+                <option value="5">5分</option>
+                <option value="6">6分</option>
+                <option value="7">7分</option>
+                <option value="8">8分</option>
+                <option value="9">9分</option>
+                <option value="10">10分</option>
+                <option value="11">11分</option>
+                <option value="12">12分</option>
+                <option value="13">13分</option>
+                <option value="14">14分</option>
+                <option value="15">15分</option>
+                <option value="16">16分</option>
+                <option value="17">17分</option>
+                <option value="18">18分</option>
+                <option value="19">19分</option>
+                <option value="20">20分</option>
+                <option value="21">21分</option>
+                <option value="22">22分</option>
+                <option value="23">23分</option>
+                <option value="24">24分</option>
+                <option value="25">25分</option>
+                <option value="26">26分</option>
+                <option value="27">27分</option>
+                <option value="28">28分</option>
+                <option value="29">29分</option>
+                <option value="30">30分</option>
+                <option value="31">31分</option>
+                <option value="32">32分</option>
+                <option value="33">33分</option>
+                <option value="34">34分</option>
+                <option value="35">35分</option>
+                <option value="36">36分</option>
+                <option value="37">37分</option>
+                <option value="38">38分</option>
+                <option value="39">39分</option>
+                <option value="40">40分</option>
+                <option value="41">41分</option>
+                <option value="42">42分</option>
+                <option value="43">43分</option>
+                <option value="44">44分</option>
+                <option value="45">45分</option>
+                <option value="46">46分</option>
+                <option value="47">47分</option>
+                <option value="48">48分</option>
+                <option value="49">49分</option>
+                <option value="50">50分</option>
+                <option value="51">51分</option>
+                <option value="52">52分</option>
+                <option value="53">53分</option>
+                <option value="54">54分</option>
+                <option value="55">55分</option>
+                <option value="56">56分</option>
+                <option value="57">57分</option>
+                <option value="58">58分</option>
+                <option value="59">59分</option>
+            </select>
+            <p>当达到开始日期时，活动会自动变为正在参与活动状态。</p>
+        </div>
+        <div class="panic_time" id="panic_endtime">
+            <span>结束日期：</span>
+            <em>*</em>
+            <input name="EndDate" type="datetime">
+            <select name="EndHour">
+                <option value="0">0时</option>
+                <option value="1">1时</option>
+                <option value="2">2时</option>
+                <option value="3">3时</option>
+                <option value="4">4时</option>
+                <option value="5">5时</option>
+                <option value="6">6时</option>
+                <option value="7">7时</option>
+                <option value="8">8时</option>
+                <option value="9">9时</option>
+                <option value="10">10时</option>
+                <option value="11">11时</option>
+                <option value="12">12时</option>
+                <option value="13">13时</option>
+                <option value="14">14时</option>
+                <option value="15">15时</option>
+                <option value="16">16时</option>
+                <option value="17">17时</option>
+                <option value="18">18时</option>
+                <option value="19">19时</option>
+                <option value="20">20时</option>
+                <option value="21">21时</option>
+                <option value="22">22时</option>
+                <option value="23">23时</option>
+            </select>
+            <select name="EndMinute">
+                <option value="0">0分</option>
+                <option value="1">1分</option>
+                <option value="2">2分</option>
+                <option value="3">3分</option>
+                <option value="4">4分</option>
+                <option value="5">5分</option>
+                <option value="6">6分</option>
+                <option value="7">7分</option>
+                <option value="8">8分</option>
+                <option value="9">9分</option>
+                <option value="10">10分</option>
+                <option value="11">11分</option>
+                <option value="12">12分</option>
+                <option value="13">13分</option>
+                <option value="14">14分</option>
+                <option value="15">15分</option>
+                <option value="16">16分</option>
+                <option value="17">17分</option>
+                <option value="18">18分</option>
+                <option value="19">19分</option>
+                <option value="20">20分</option>
+                <option value="21">21分</option>
+                <option value="22">22分</option>
+                <option value="23">23分</option>
+                <option value="24">24分</option>
+                <option value="25">25分</option>
+                <option value="26">26分</option>
+                <option value="27">27分</option>
+                <option value="28">28分</option>
+                <option value="29">29分</option>
+                <option value="30">30分</option>
+                <option value="31">31分</option>
+                <option value="32">32分</option>
+                <option value="33">33分</option>
+                <option value="34">34分</option>
+                <option value="35">35分</option>
+                <option value="36">36分</option>
+                <option value="37">37分</option>
+                <option value="38">38分</option>
+                <option value="39">39分</option>
+                <option value="40">40分</option>
+                <option value="41">41分</option>
+                <option value="42">42分</option>
+                <option value="43">43分</option>
+                <option value="44">44分</option>
+                <option value="45">45分</option>
+                <option value="46">46分</option>
+                <option value="47">47分</option>
+                <option value="48">48分</option>
+                <option value="49">49分</option>
+                <option value="50">50分</option>
+                <option value="51">51分</option>
+                <option value="52">52分</option>
+                <option value="53">53分</option>
+                <option value="54">54分</option>
+                <option value="55">55分</option>
+                <option value="56">56分</option>
+                <option value="57">57分</option>
+                <option value="58">58分</option>
+                <option value="59">59分</option>
+            </select>
+            <p>当达到结束日期时，活动会结束。</p>
+        </div>
+    </div>
+    <!--打折与否部分-->
+    <div class="panic_discountradio">
+        <span>抢购是否支持打折：</span>
+        <em>*</em>
+        <label>
+            <input type="radio" name="IsDiscount" value="false" checked="checked" />
+            <i>不支持</i>
+        </label>
+        <label>
+            <input type="radio" name="IsDiscount" value="true" />
+            <i>支持</i>
+        </label>
+</div>
+    <div class="panic_discount">
+        <div class="panic_discountradio">
+            <span>打折类型：</span>
+            <em>*</em>
+            <label>
+                <input type="radio" name="DiscountType" value="0" checked="checked" />
+                <i>打折码</i>
+            </label>
+            <label>
+                <input type="radio" name="DiscountType" value="1" />
+                <i>现金券</i>
+            </label>
+        </div>
+        <div class="panic_disountbase">
+            <span>打折基数：</span>
+            <input name="DiscountNumber" type="text" value="0" />
+            <i>%</i>
+            <em>*</em>
+            <p>打折基数上限为9999.9，且必须为数字，小数点后1位有效。</p>
+        </div>
+        <div class="panic_disountnum">
+            <span>可生成打折码数量：</span>
+            <em>*</em>
+            <input name="DiscountNum" type="text" />
+            <p>可生成打折码数量必填，且位数不能超过5位</p>
+        </div>
+        <div class="panic_discountexpired">
+            <span>打折码过期类型：</span>
+            <em>*</em>
+            <label>
+                <input type="radio" name="CouponOutType" value="0" checked="checked" />
+                <i>设置过期时间</i>
+            </label>
+            <label>
+                <input type="radio" name="CouponOutType" value="1" />
+                <i>发货后过期天数</i>
+            </label>
+        </div>
+        <div class="panic_deadtime">
+            <span>过期时间：</span>
+            <em>*</em>
+            <input type="datetime" name="SetCouponOutDate" />
+            <p>过期时间必填</p>
+        </div>
+        <div class="panic_deadtime" style="display:none;">
+            <span>发货后过期天数：</span>
+            <em>*</em>
+            <input type="text" name="SetCouponOutDays" />
+            <p>发货后过期天数必填且为数字且位数不能超过5位</p>
+        </div>
+        <div class="panic_disountbase">
+            <span>打折商品页面链接：</span>
+            <em>*</em>
+            <input type="text" name="DiscountUrl" />
+            <p>商城打折商品PC端链接/Touch端链接至少必填一项</p>
+        </div>
+    </div>
+    <div class="panic_limit_num">
+        <span>抢购扣分分值：</span>
+        <select name="SubPointRule">
+            <option>--请选择--</option>
+        </select>
+    </div>
+    <div class="panic_limit_num">
+        <span>抢购加分分值：</span>
+        <select name="AddPointRule">
+            <option>--请选择--</option>
+        </select>
+    </div>
+    <div class="panic_timelimit">
+        <div class="panic_limit_price">
+            <span><!--限时抢购价格-->是否免运费：</span>
+            <input type="hidden" name="CountDownPrice" value="0" />
+            <label>
+                <input type="checkbox" name="WithShippingFee" checked="checked" />
+                <em style="display:inline-block;">免运费</em>
+            </label>
+           <!--<p>限时抢购价格，不能为空。</p>-->
+</div>
+    </div>
+    <div class="panic_limit_num">
+        <span>限时实际抢购数量：</span>
+        <input type="text" name="ActivityStock" value="1" />
+        <p>限时实际抢购数量，且不能为空，且不能大于现有库存。一旦输入将不能修改。</p>
+    </div>
+    <div class="panic_limit_surnum">
+        <span>限时抢购显示数量：</span>
+        <input type="text" name="Stock4Display" value="1" />
+        <p>限时抢购显示数量，且不能为空，一旦输入将不能修改。</p>
+    </div>
+    <div class="panic_limit_recoverytime">
+        <span>商品回收时间：</span>
+        <input type="text" name="RecoveryTime" value="30" />
+        <i>分</i>
+        <em>*</em>
+        <p>顾客抢购后，未下订单的超时间</p>
+    </div>
+    <div class="panic_area">
+        <span>活动地区说明：</span>
+        <textarea name="CountDownAddress" style="height:50px" /></textarea>
+        <p>活动地区说明，只针对本次活动。</p>
+    </div>
+    <div class="panic_explain">
+        <span>活动说明：</span>
+        <textarea name="Content" rows="8" style="height:100px" /></textarea>
+    </div>
+    <a href="javascript:;" id="panic_addactivity" class="btn-submit">提交</a>
+</div>
+</body>
+</html>

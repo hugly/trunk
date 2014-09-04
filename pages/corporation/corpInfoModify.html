@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>编辑商家店铺信息</title>
+   
+    <link rel="stylesheet" type="text/css" href="../../css/all.css">
+    <link rel="stylesheet" type="text/css" href="corpInfoModify.css">
+    <script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="../../js/jq.extend.js"></script>
+    <script type="text/javascript" src="corpInfoModify.js"></script>
+    <link rel="stylesheet" href="../../doc_edit/themes/default/default.css" />
+</head>
+<body>
+    <!--编辑商家店铺信息-->
+    <div class="artical_addartical" id="div_corpinfo">
+        <div class="artical_addartical_infro">
+        
+            <div class="artical_addartical_infro_category">
+                <span>店铺名称：</span>
+                <input type="text" class="corpinfo_CorpName" name="CorpName" maxlength="20">
+                <em>*</em>
+                <i>限制在20个字符以内</i>
+            </div>
+            <div class="artical_addartical_infro_category">
+                <span>店铺简称：</span>
+                <input type="text" class="artical_addartical_infro_goods" name="CorpNickName" maxlength="10">
+             
+                <i>限制在10个字符以内</i>
+            </div>
+            <div class="artical_addartical_infro_category">
+                <span>店铺模板：</span>
+                <select name="TemplateCode">
+                    <option value="TemplateOne">模板一</option>
+                    <option value="TemplateTwo">模板二</option>
+                    <option value="TemplateThree">模板三</option>
+                </select>
+
+            </div>
+            <div class="artical_addartical_pic_goods">
+                <span>店铺Logo：</span>
+                <div class="artical_addartical_pic_goods_list" id="div__CorpLogoIdList"></div>
+                <form id="form_CorpLogoId">
+                    <input type="file" id="txtfile_CorpLogoId" name="file"><em>*</em>
+                    <i>Logo大小为：160px*150px</i>
+                </form>
+              
+            </div>
+
+            <div class="artical_addartical_infro_name">
+                <span>联系电话：</span>
+                <input type="text" id="artical_addartical_infro_name" name="CorpCall" maxlength="15">
+            </div>
+            <div class="artical_addartical_infro_code">
+                <span>联系地址：</span>
+                <input type="text" id="artical_addartical_infro_article_code" name="CorpAddress" maxlength="200">
+            </div>
+            <div class="artical_addartical_infro_code">
+                <span>联系邮箱：</span>
+                <input type="text" id="artical_addartical_infro_code" name="CorpEmail" maxlength="50">
+            </div>
+            <div class="artical_addartical_infro_code">
+                <span>联系QQ：</span>
+                <input type="text" id="artical_addartical_infro_code" name="CorpQQ" maxlength="100"><i>多个QQ使用英文逗号分割</i>
+            </div>
+            <div class="artical_addartical_infro_code">
+                <span>商家地图位置：</span>
+                <input type="text" id="artical_addartical_infro_code" name="CorpCoord"><a onclick="javascript: window.open('http://api.map.baidu.com/lbsapi/getpoint/index.html','_blank');">百度地图拾取坐标</a>
+            </div>
+            <div class="artical_addartical_infro_code">
+                <span>外部网店URL：</span>
+                <input type="text" id="artical_addartical_infro_code" name="CorpUrl" maxlength="200">
+            </div>
+            <div class="artical_addartical_infro_code">
+                <span>商家信息自定义标题：</span>
+                <input type="text" id="artical_addartical_infro_code" name="CorpInfoTitle" maxlength="4">
+            </div>
+            <div class="artical_addartical_infro_code">
+                <span>联系方式自定义标题：</span>
+                <input type="text" id="artical_addartical_infro_code" name="CorpLinkTitle" maxlength="4">
+            </div>
+            <div class="artical_addartical_infro_code">
+                <span>免费抢购自定义标题：</span>
+                <input type="text" id="artical_addartical_infro_code" name="CorpCountDownTitle" maxlength="4">
+            </div>
+            <!--<div class="artical_addartical_infro_code">
+                <span>专题活动自定义标题：</span>
+                <input type="text" id="artical_addartical_infro_code" name="CorpActivityTitle" maxlength="4">
+            </div>-->
+            <div class="artical_addartical_infro_code">
+                <span>推荐商品自定义标题：</span>
+                <input type="text" id="artical_addartical_infro_code" name="CorpRecommendProductTitle" maxlength="4">
+            </div>
+            <!--<div class="artical_addartical_infro_code">
+                <span>游戏中心自定义标题：</span>
+                <input type="text" id="artical_addartical_infro_code" name="CorpGameTitle" maxlength="4">
+            </div>-->
+            <div class="artical_addartical_infro_code">
+                <span>资讯中心自定义标题：</span>
+                <input type="text" id="artical_addartical_infro_code" name="CorpInformationTitle" maxlength="4">
+            </div>
+        </div>
+        <div class="artical_addartical_save btn-submit">
+            <a href="javascript:;">确定</a>
+        </div>
+    </div>
+</body>
+</html>

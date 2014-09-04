@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>商品相关资讯</title>
+    <link rel="stylesheet" type="text/css" href="../../css/all.css">
+    <link rel="stylesheet" type="text/css" href="product_inforAboutProduct.css">
+    <script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="product_inforAboutProduct.js"></script>
+</head>
+<body>
+<div class="product_inforAboutProduct">
+    <div class="product_inforAboutProduct_title" id="product_inforAboutProduct_title">
+        <h3></h3>
+        <div class="product_inforAboutProduct_title_img"><img src></div>
+    </div>
+    <div class="product_inforAboutProduct_content" id="product_inforAboutProduct_content">
+        <div class="product_inforAboutProduct_content_left_search">
+            <span>关键字:</span>
+            <input type="text" id="product_inforAboutProduct_content_left_search_text">
+            <a href="javascipt:;" id="product_inforAboutProduct_content_left_search_btn">查询</a>
+        </div>
+        <div class="product_inforAboutProduct_content_left">
+            <div class="product_inforAboutProduct_content_left_title">
+                <div class="product_left_inforName">资讯名称</div>
+                <div class="product_left_oper">操作</div>
+            </div>
+            <div class="product_inforAboutProduct_content_left_template_layer" id="product_inforAboutProduct_content_left_template_layer">
+            </div>
+        </div>
+        <div class="product_inforAboutProduct_content_right">
+            <div class="product_inforAboutProduct_content_right_title">
+                <div class="product_right_oper">操作</div>
+                <div class="product_right_inforName">资讯名称</div>
+            </div>
+            <div class="product_inforAboutProduct_content_right_template_layer" id="product_inforAboutProduct_content_right_template_layer">
+            </div>
+        </div>
+    </div>
+    <div class="product_inforAboutProduct_oper">
+        <a href="javascript:;" class="product_inforAboutProduct_oper_add" id="product_inforAboutProduct_oper_add">添加</a>
+        <a href="javascript:;" class="product_inforAboutProduct_oper_empty" id="product_inforAboutProduct_oper_empty">清空</a>
+    </div>
+</div>
+<div class="product_inforAboutProduct_content_left_template" id="product_inforAboutProduct_content_left_template" style="display: none;">
+    <div class="product_left_inforName"><span></span></div>
+    <div class="product_left_oper"><a href="javascript:;"></a></div>
+</div>
+<div class="product_inforAboutProduct_content_right_template" id="product_inforAboutProduct_content_right_template" style="display: none;">
+    <div class="product_right_oper"><a href="javascript:;"></a></div>
+    <div class="product_right_inforName"><span></span></div>
+</div>
+
+</body>
+</html>

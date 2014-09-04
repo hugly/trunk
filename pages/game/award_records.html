@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>游戏奖励记录</title>
+    <link rel="stylesheet" href="../../css/all.css">
+    <link rel="stylesheet" href="award_records.css">
+    <link rel="stylesheet" href="../../doc_edit/themes/default/default.css" />
+    <script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+    <link rel="stylesheet" href="../../datepicker/jquery-ui-1.10.4.custom.min.css" />
+    <script type="text/javascript" src="../../js/jq.extend.js"></script>
+    <script type="text/javascript" src="../../js/create_list.js"></script>
+    <script type="text/javascript" src="award_records.js"></script>
+    <script charset="utf-8" src="../../doc_edit/kindeditor-min.js"></script>
+    <script charset="utf-8" src="../../doc_edit/lang/zh_CN.js"></script>
+    <script type="text/javascript" src="../../js/create_input.js"></script>
+    <script src="../../datepicker/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="game_nav">
+    <ul>
+        <li><a href="trophy.html">奖品管理</a></li>
+        <li class="active"><a href="javascript:;">游戏奖励记录</a></li>
+        <li><a href="number_management.html">游戏次数管理</a></li>
+    </ul>
+</div>
+<div class="award_records_list" id="award_records_list">
+    <div class="search_award_records_list">
+        <div class="search_award_records_list_search">
+            <span>所属游戏</span>
+            <select id="blongsGame"></select>
+            <span>会员ID:</span>
+            <input class="search_award_records_list_search_ID" type="text">
+            <span>会员名:</span>
+            <input class="search_award_records_list_search_Name" type="text">
+            <span>选择时间段:</span>
+            <input id="search_award_records_list_search_StartTime" type="text">
+            <span>至</span>
+            <input id="search_award_records_list_search_EndTiem" type="text">
+            <a href="javascript:;" id="search_award_records_query">查询</a>
+        </div>
+    </div>
+    <div class="award_records_list_layer" id="award_records_list_layer">
+
+    </div>
+</div>
+</body>
+</html>

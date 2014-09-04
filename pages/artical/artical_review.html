@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>资讯评论管理</title>
+    <link rel="stylesheet" type="text/css" href="artical_review.css">
+    <link rel="stylesheet" type="text/css" href="../../css/all.css">
+    <script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="../../js/jq.extend.js"></script>
+    <script type="text/javascript" src="artical_review.js"></script>
+</head>
+<body>
+<div class="artical_nav">
+    <ul>
+        <li><a href="artical_management.html">文章管理</a></li>
+        <li class="active"><a href="javascript:;">资讯评论管理</a></li>
+        <li><a href="artical_Category.html">文章类别管理</a></li>
+    </ul>
+</div>
+
+<div class="artical_review">
+    <!--<div class="add_artical_review"><a href="javascript:;" id="add_artical_review">添加新文章</a> </div>-->
+    <div class="search_artical_review">
+        <div class="search_artical_review_search">
+            <span>关键字:</span>
+            <input class="search_artical_review_search_pro" type="text">
+            <!--<span>用户名称:</span>-->
+            <!--<input class="search_artical_review_search_code" type="text" value="test">-->
+            <a href="javascript:;" id="search_artical_review_search">查询</a>
+        </div>
+    </div>
+    <div class="artical_review_list" id="artical_review_title">
+        <div class="artical_review_title">
+            <div class="artical_review_reivewid">序号</div>
+            <div class="artical_review_reviewtitle" style="display: none;">资讯标题</div>
+            <div class="artical_review_content">评论内容</div>
+            <div class="artical_review_username">用户名称</div>
+            <div class="artical_review_display">显示状态</div>
+        </div>
+        <div class="artical_review_detail" id="artical_review_template" style="display: none;">
+            <div class="artical_review_reivewid"><span></span></div>
+            <div class="artical_review_reviewtitle" style="display: none;"><a href="javascript:;"></a></div>
+            <div class="artical_review_content"><span></span></div>
+            <div class="artical_review_username"><span></span></div>
+            <div class="artical_review_display"><a href="javascript:;" id="artical_review_reviewshow"></a></div>
+        </div>
+    </div>
+</div>
+
+<div class="add_artical_review_con" id="add_artical_review_con"></div>
+<div class="add_artical_review_list" id="add_artical_review_list">
+    <div class="add_artical_review_namdiv">
+        <span>是否推荐：</span>
+        <select>
+            <option>推荐</option>
+            <option>不推荐</option>
+        </select>
+    </div>
+    <div class="add_artical_review_icondiv">
+        <span>是否显示：</span>
+        <select>
+            <option>显示</option>
+            <option>不显示</option>
+        </select>
+    </div>
+    <div class="add_artical_review_icondiv">
+        <span>推荐排序:</span>
+        <input type="text" value="1">
+        <p>数字越大，显示位置越靠前</p>
+    </div>
+    <div class="add_artical_review_introdiv">
+        <span>评论内容：<em>*</em></span>
+        <textarea class="add_artical_review_intro"></textarea>
+    </div>
+    <div class="add_artical_review_btn">
+        <a href="javascript:;" class="add_artical_review_list_add">确定</a>
+    </div>
+    <a href="javascript:;" id="add_artical_review_del"></a>
+</div>
+</body>
+</html>

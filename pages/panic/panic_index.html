@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <title>抢购管理</title>
+    <link rel="stylesheet" type="text/css" href="../../css/data-grid.css">
+    <link rel="stylesheet" type="text/css" href="../../css/all.css">
+    <script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="../../js/jq.extend.js"></script>
+    <script type="text/javascript" src="../../js/data-grid.js"></script>
+</head>
+<body>
+    <div class="data-grid" data-ajax-url="CountDown/GetList" data-key="CountDownId" data-scroll="true" data-method="get">
+        <div class="headr-bar"><a ajax-window="true" class="btn btn-add" data-url="/project/svn/商家后台/trunk/TGShop.Corp.Admin/TGShop.Corp.Admin/pages/panic/panic_add.html" title="添加抢购活动" data-width="850" data-height="600">添加抢购活动</a> </div>
+        <div class="search-bar">
+            <span>商品名称:</span>
+            <input class="search-box" name="queryKey" type="text" value="test">
+            <!--<span>商品编码:</span>-->
+            <!--<input class="search_panic_index_search_code" type="text" value="test">-->
+            <a href="javascript:;" class="btn-search">查询</a>
+        </div>
+        <div class="data-table">
+            <div class="data-header">
+                <div class="row-column span03 left">商品名称</div>
+                <div class="row-column span02">开始时间</div>
+                <div class="row-column span02">结束时间</div>
+                <div class="row-column span01">抢购数量</div>
+                <div class="row-column span01">抢购剩余</div>
+                <div class="row-column span01">是否打折</div>
+                <div class="row-column span15">操作</div>
+            </div>
+            <div class="data-row">
+                <div class="row-column span03 left" data-field="ProductName" data-type="link" data-url="/project/svn/商家后台/trunk/TGShop.Corp.Admin/pages/panic/panic_add.html?id={CountDownId}"><a href="javascript:;">商品名称商品名称商品名称</a></div>
+                <div class="row-column span02" data-field="StartDate" data-type="date" data-format="yyyy-MM-dd hh:mm"></div>
+                <div class="row-column span02" data-field="EndDate" data-type="date" data-format="yyyy-MM-dd hh:mm"></div>
+                <div class="row-column span01" data-field="ActivityStock"></div>
+                <div class="row-column span01" data-field="DecreaseStock"></div>
+                <div class="row-column span01" data-field="IsDiscountCode" data-type="Boolean"></div>
+                <div class="row-column span15"><a class="btn btn-edit" ajax-window="true" data-url="/project/svn/商家后台/trunk/TGShop.Corp.Admin/TGShop.Corp.Admin/pages/panic/panic_add.html?id={CountDownId}" title="编辑抢购活动" data-width="850" data-height="600" href="javascript:;">编辑</a> <a class="btn btn-del" ajax-delete="true" data-url="CountDown/Delete?CountDownId={CountDownId}" ajax-method="get" title="删除抢购活动" href="javascript:;">删除</a> </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

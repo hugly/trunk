@@ -1,0 +1,275 @@
+.product_addcommodity{ width: 96%; padding: 2%; height: auto; position: relative;}
+/*基本信息*/
+.product_addcommodity_infro,.product_addcommodity_search,.product_addcommodity_extend,.product_addcommodity_pic,.product_addcommodity_pic_goods,.product_addcommodity_set{
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+.product_addcommodity_infro h3,.product_addcommodity_search h3,.product_addcommodity_extend h3,.product_addcommodity_pic h3,.product_addcommodity_set h3{
+    color: #ff7f00;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+/*店铺分类*/
+.product_addcommodity_infro_type,.product_addcommodity_infro_category,.product_addcommodity_info_setData{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    margin: 5px 0;
+}
+.add_product_addcommodity_label span{
+    float: left;
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+    font-size: 14px;
+    margin-right: 5px;
+    font-weight: normal;
+}
+.product_addcommodity_infro_type span,.add_product_addcommodity_goods_store span,.add_product_addcommodity_goods_price span,.add_product_addcommodity_goods_link span,.add_product_addcommodity_goods_sort span,.add_product_addcommodity_goodsbtn span,.product_addcommodity_set_lable span,.product_addcommodity_set_price span,.product_addcommodity_goods_desc h4,.product_addcommodity_goods_intro span,.product_addcommodity_pic_goods span,.product_addcommodity_extend span,.product_addcommodity_infro_category span,.product_addcommodity_info_setData span,.product_addcommodity_infro_price span,.product_addcommodity_infro_sort span,.product_addcommodity_infro_name span,.product_addcommodity_setData span,.product_addcommodity_setday span,.product_addcommodity_infro_code span{
+    float: left;
+    display: inline-block;
+    width: 135px;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+    font-size: 14px;
+    margin-right: 5px;
+    font-weight: normal;
+}
+.product_addcommodity_infro_type select,.product_addcommodity_extend select,.add_product_addcommodity_goods_store select{
+    float: left;
+    width: 120px;
+    margin-top: 6px;
+}
+
+.product_addcommodity_infro_type em,.product_addcommodity_infro_category em,.product_addcommodity_infro_name em,.product_addcommodity_infro_sort em,.product_addcommodity_info_setData em,.product_addcommodity_setday em,.product_addcommodity_setData em,.product_addcommodity_infro_code em,.product_addcommodity_extend em{
+    display: inline-block;
+    color: #f00;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 5px;
+}
+.product_addcommodity_coupons,.product_addcommodity_setday{
+    display: none;
+}
+.product_addcommodity_infro_category input,.product_addcommodity_info_setData input{
+    float: left;
+    display: inline-block;
+    margin: 0px 5px;
+    height: 30px;
+    line-height: 30px;
+}
+.product_addcommodity_infro_category i,.product_addcommodity_info_setData i{
+    float: left;
+    font-style: normal;
+    margin-right: 20px;
+}
+
+.product_addcommodity_infro_name,.product_addcommodity_infro_sort,.product_addcommodity_goods_desc,.product_addcommodity_setday,.product_addcommodity_infro_code,.product_addcommodity_infro_price,.product_addcommodity_goods_intro{
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin: 5px 0;
+}
+.add_product_addcommodity_goods_price input,.add_product_addcommodity_goods_link input,.add_product_addcommodity_goods_sort input,.add_product_addcommodity_goodsbtn input,.product_addcommodity_infro_sort input,.product_addcommodity_infro_name input,.product_addcommodity_setday input,.product_addcommodity_setData input,.product_addcommodity_infro_code input,.product_addcommodity_infro_price input{
+    float: left;
+    font-size: 14px;
+    width: 200px;
+    height: 16px;
+    line-height: 16px;
+    padding: 4px 10px;
+}
+
+.product_addcommodity_infro_name p,.product_addcommodity_infro_sort p,.product_addcommodity_goods_desc p,.product_addcommodity_goods_intro p,.product_addcommodity_pic_goods p,.product_addcommodity_setData p,.product_addcommodity_infro_code p,.product_addcommodity_setday p,.product_addcommodity_infro_price p{
+    width: 80%;
+    float: left;
+    padding-left: 140px;
+}
+
+.product_addcommodity_infro_price em{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 5px;
+    font-size: 14px;
+}
+
+#product_addcommodity_pic_goods_list{
+    float: left;
+    width:100%;
+    height: auto;
+}
+.product_addcommodity_pic_goods_list_up{
+    float: left;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 300px;
+    background: #f00;
+    color: #fff;
+    text-align: center;
+}
+.product_addcommodity_goods_intro textarea,.product_addcommodity_goods_desc textarea{
+    float: left;
+    width: 400px;
+    height: 100px;
+}
+.product_addcommodity_goods_desc_is{
+    float: left;
+    width: 80%;
+    padding-left: 125px;
+    margin:5px 0;
+}
+.product_addcommodity_goods_desc_is em{
+    color: #f00;
+}
+.product_addcommodity_set_price,.product_addcommodity_set_lable{
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0;
+}
+.product_addcommodity_set_price a,.product_addcommodity_set_lable a{
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background: #f00;
+    color: #fff;
+    margin-top: 5px;
+}
+.product_addcommodity_search_word{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    overflow: hidden;
+}
+.product_addcommodity_search_word span{
+    float: left;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: right;
+    margin-top: 5px;
+}
+.product_addcommodity_search_word input{
+    float: left;
+    width: 200px;
+    height: 16px;
+    line-height: 16px;
+    padding: 4px;
+    margin: 5px;
+}
+.product_addcommodity_save{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.product_addcommodity_save a{
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #09f;
+    color: #fff;
+    display: block;
+    margin-left: 360px;
+    font-size: 14px;
+}
+.add_product_addcommodity_con{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.6;
+    filter:alpha(opacity=60);
+    display: none;
+}
+
+.add_product_addcommodity_labellist{
+    width: 360px;
+    height: 120px;
+    background: #fff;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -230px;
+    margin-top: -130px;
+    padding: 40px 50px;
+}
+.add_product_addcommodity_label,.add_product_addcommodity_labelbtn{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.add_product_addcommodity_label input{
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    padding: 5px;
+    width: 200px;
+}
+
+.add_product_addcommodity_labelbtn a{
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    background: #09f;
+    text-align: center;
+    font-size: 14px;
+}
+
+#add_product_addcommodity_label_del{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url("image/cancel.png") no-repeat 0 0;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.product_addcommodity_set_lable_container{
+    width: 100%;
+    height: auto;
+}
+.product_addcommodity_set_lable_container_ul{
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
+}
+.product_addcommodity_set_lable_container_ul li{
+    float: left;
+    display: inline-block;
+    width: auto;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin: 5px 10px;
+}
+.product_addcommodity_set_lable_container_ul li label{
+    margin-left: 5px;
+}

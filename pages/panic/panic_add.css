@@ -1,0 +1,171 @@
+.panic_add{
+    padding: 20px;
+    position: relative;
+}
+.panic_check,.panic_data,.panic_discount,.panic_timelimit,.panic_timelimit{
+    width: 100%;
+    position:relative;
+    overflow: hidden;
+    margin: 5px  0;
+}
+.panic_check span{
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    color: #D53700;
+    font-size: 14px;
+    padding-left: 10px;
+}
+.panic_check input,.panic_limit_recoverytime input,.panic_limit_num input,.panic_limit_surnum input,.panic_time input,.panic_disountbase input,.panic_limit_price input,.panic_disountnum input,.panic_deadtime input{
+    float: left;
+    height: 16px;
+    width: 140px;
+    line-height: 16px;
+    font-size: 12px;
+    padding: 3px;
+    margin: 2px 0 2px 5px;
+}
+input[type='checkbox']{
+    width: auto;
+    margin-top:8px;
+}
+label {
+    line-height:30px;
+}
+.panic_check select{
+    float: left;
+    height: 26px;
+    width: 140px;
+    line-height: 26px;
+    margin: 2px 5px;
+}
+.panic_time select{
+    float: left;
+    height: 26px;
+    width: 60px;
+    line-height: 26px;
+    margin: 2px 5px;
+}
+.panic_check a{
+    float: left;
+    display: inline-block;
+    width: 80px;
+    height: 26px;
+    line-height: 26px;
+    margin-top: 2px;
+    margin-left: 5px;
+    text-align:center;
+    font-size: 14px;
+    background: #ff0000;
+    color: #fff;
+}
+
+.panic_selectpro,.panic_explain,.panic_area,.panic_limit_recoverytime,.panic_limit_surnum,.panic_limit_num,.panic_time,.panic_limit_price,.panic_discountradio,.panic_disountbase,.panic_disountnum,.panic_deadtime,.panic_discountexpired{
+    width: 100%;
+    position:relative;
+    overflow: hidden;
+    margin: 5px 0;
+}
+.panic_selectpro span,.panic_explain span,.panic_area span,.panic_limit_recoverytime span,.panic_limit_surnum span,.panic_limit_num span,.panic_time span,.panic_limit_price span,.panic_discountexpired span,.panic_discountradio span,.panic_deadtime span,.panic_disountbase span,.panic_disountnum span{
+    float: left;
+    display: inline-block;
+    text-align:right;
+    width: 126px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+.panic_selectpro select{
+    float: left;
+    height: 26px;
+    width: 380px;
+    line-height: 26px;
+    margin: 2px 5px;
+}
+.panic_selectpro p,.panic_area p,.panic_limit_recoverytime p,.panic_limit_surnum p,.panic_limit_num p,.panic_time p,.panic_limit_price p,.panic_disountbase p,.panic_disountnum p,.panic_deadtime p{
+    float: left;
+    width: 80%;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #999;
+    padding-left: 140px;
+}
+.panic_time em,.panic_limit_recoverytime em,.panic_discountradio em,.panic_disountbase em,.panic_discountexpired em,.panic_disountnum em,.panic_deadtime em{
+    color: #f00;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 5px;
+    margin-top: 2px;
+}
+.panic_discountradio input,.panic_discountexpired input,#panic_free{
+    float: left;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    margin:8px 5px 0 ;
+}
+.panic_disountbase i,.panic_limit_recoverytime i{
+    font-style: normal;
+    display: inline-block;
+    font-size: 16px;
+    color: #f00;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 5px;
+}
+.panic_discountradio i,.panic_discountexpired i{
+    font-style: normal;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+}
+.panic_limit_price em{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 2px;
+}
+.panic_area textarea,.panic_explain textarea{
+    float: left;
+    width: 400px;
+    height: 200px;
+    margin-top: 10px;
+}
+#panic_addactivity{
+     display: block;
+     width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align:center;
+    margin-left: 340px;
+    margin-top: 20px;
+    background: #09f;
+    color: #fff;
+}
+.panic_discount{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

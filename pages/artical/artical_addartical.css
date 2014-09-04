@@ -1,0 +1,283 @@
+.artical_addartical{ width: 96%; padding: 2%; height: auto; position: relative;}
+/*基本信息*/
+.artical_addartical_infro,.artical_addartical_search,.artical_addartical_extend,.artical_addartical_pic,.artical_addartical_pic_goods,.artical_addartical_set{
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+/*店铺分类*/
+.artical_addartical_infro_type,.artical_addartical_infro_category{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    margin: 5px 0;
+}
+
+.artical_addartical_infro_check{
+    float: left;
+    line-height: 30px;
+    height: 30px;
+    margin-top: 1px;
+    margin-right: 5px;
+}
+
+.artical_addartical p{
+    width: 80%;
+    float: left;
+    padding-left: 125px;
+    color:#999;
+}
+.artical_addartical p.artical_addartical_zhaiyao{
+    padding-left: 86px;
+    color: #f00;
+}
+.artical_addartical_infro_type a{
+    float: left;
+    display: inline-block;
+    color: #09f;
+}
+.artical_addartical_infro_type span,.add_artical_addartical_goods_store span,.add_artical_addartical_goods_price span,.add_artical_addartical_goods_link span,.add_artical_addartical_goods_sort span,.add_artical_addartical_goodsbtn span,.artical_addartical_set_lable span,.artical_addartical_set_price span,.artical_addartical_goods_desc_span,.artical_addartical_goods_intro span,.artical_addartical_pic_goods span,.artical_addartical_extend span,.artical_addartical_infro_category span,.artical_addartical_infro_price span,.artical_addartical_infro_name span,.artical_addartical_infro_code span{
+    float: left;
+    display: inline-block;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+    font-size: 14px;
+    margin-right: 5px;
+}
+.artical_addartical_infro_type select,.artical_addartical_extend select,.add_artical_addartical_goods_store select{
+    float: left;
+    text-align:center;
+    width: 160px;
+    height: 24px;
+    margin-top: 3px;
+}
+.artical_addartical_goods_desc em{
+    float: left;
+    display: inline-block;
+    color: #f00;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 125px;
+}
+.artical_addartical_infro_category em,.artical_addartical_infro_type em{
+    float: left;
+    display: inline-block;
+    color: #f00;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 10px;
+}
+.artical_addartical_infro_category i{
+    float: left;
+    font-style: normal;
+    margin-right: 20px;
+}
+
+.artical_addartical_infro_name,.artical_addartical_goods_desc,.artical_addartical_infro_code,.artical_addartical_infro_price,.artical_addartical_goods_intro{
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin: 5px 0;
+}
+.add_artical_addartical_goods_price input,.artical_addartical_infro_goods,.add_artical_addartical_goods_link input,.add_artical_addartical_goods_sort input,.add_artical_addartical_goodsbtn input,.artical_addartical_infro_name input,.artical_addartical_infro_code input,.artical_addartical_infro_price input{
+    float: left;
+    font-size: 14px;
+    width: 200px;
+    height: 16px;
+    line-height: 16px;
+    padding: 4px 10px;
+}
+
+.artical_addartical_infro_name p,.artical_addartical_goods_desc p,.artical_addartical_goods_intro p,.artical_addartical_pic_goods p,.artical_addartical_infro_code p,.artical_addartical_infro_price p{
+    width: 80%;
+    float: left;
+    padding-left: 125px;
+}
+
+.artical_addartical_infro_price em{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 5px;
+    font-size: 14px;
+}
+
+.artical_addartical_pic_goods_list{
+    float: left;
+    width:100%;
+    margin: 10px 0;
+}
+.artical_addartical_pic_goods_list_up{
+    float: left;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 300px;
+    background: #f00;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+.artical_addartical_goods_intro textarea,.artical_addartical_goods_desc textarea{
+    float: left;
+    width: 380px;
+    height:180px;
+    padding: 10px;
+}
+.artical_addartical_goods_desc_is{
+    float: left;
+    width: 80%;
+    padding-left: 125px;
+    margin:5px 0;
+}
+.artical_addartical_goods_desc_is em{
+    color: #f00;
+}
+.artical_addartical_set_price,.artical_addartical_set_lable{
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0;
+}
+.artical_addartical_set_price a,.artical_addartical_set_lable a{
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background: #f00;
+    color: #fff;
+    margin-top: 5px;
+}
+.artical_addartical_search_word{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    overflow: hidden;
+}
+.artical_addartical_search_word span{
+    float: left;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: right;
+    margin-top: 5px;
+}
+.artical_addartical_search_word input{
+    float: left;
+    width: 200px;
+    height: 16px;
+    line-height: 16px;
+    padding: 4px;
+    margin: 5px;
+}
+.artical_addartical_save{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.artical_addartical_save a{
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #09f;
+    color: #fff;
+    display: block;
+    margin-left: 360px;
+    font-size: 14px;
+}
+.add_artical_addartical_con{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.6;
+    filter:alpha(opacity=60);
+    display: none;
+}
+
+.add_artical_addartical_labellist{
+    width: 360px;
+    height: 120px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -230px;
+    margin-top: -130px;
+    padding: 40px 50px;
+    display: none;
+}
+.add_artical_addartical_label{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+.add_artical_addartical_label input{
+    height: 20px;
+    line-height: 20px;
+    padding: 5px;
+    width: 200px;
+}
+
+.add_artical_addartical_goodslist{
+    width: 360px;
+    height: 220px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -230px;
+    margin-top: -130px;
+    padding: 40px 50px;
+    display: none;
+}
+.add_artical_addartical_goods_store,.add_artical_addartical_goods_price,.add_artical_addartical_goods_link,.add_artical_addartical_goods_sort,.add_artical_addartical_goodsbtn{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    margin: 5px 0;
+}
+
+.add_artical_addartical_labelbtn a,.add_artical_addartical_goodsbtn a{
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #09f;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 130px;
+    margin-top: 20px;
+}
+#add_artical_addartical_goods_del,#add_artical_addartical_label_del{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url("image/cancel.png") no-repeat 0 0;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+#artical_addartical_pic_goods_list_up{
+    margin-top: 5px;
+}

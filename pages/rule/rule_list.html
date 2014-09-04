@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../css/all.css">
+    <link rel="stylesheet" href="rule_list.css">
+    <link rel="stylesheet" href="../../doc_edit/themes/default/default.css" />
+    <script type="text/javascript" src="../../js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="../../js/jq.extend.js"></script>
+    <script type="text/javascript" src="../../js/create_list.js"></script>
+    <script type="text/javascript" src="rule_list.js"></script>
+    <script charset="utf-8" src="../../doc_edit/kindeditor-min.js"></script>
+    <script charset="utf-8" src="../../doc_edit/lang/zh_CN.js"></script>
+    <script type="text/javascript" src="../../js/create_input.js"></script>
+</head>
+<body>
+<div class="rule_list" id="rule_list">
+    <div class="add_rule_list"><a href="javascript:;" id="add_rule_list">添加新规则</a> </div>
+    <div class="search_rule_list">
+        <div class="search_rule_list_search">
+            <span>规则变动类型:</span>
+            <select id="search_rule_change_type"></select>
+            <span>规则角色类型:</span>
+            <select id="search_rule_role_type"></select>
+            <span>搜索关键字:</span>
+            <input class="search_rule_list_search_pro" type="text">
+            <a href="javascript:;" id="search_product_query">查询</a>
+        </div>
+    </div>
+    <div class="rule_list_layer" id="rule_list_layer">
+
+    </div>
+</div>
+<div class="add_rule_temp" id="add_rule_temp" style="display: none;"></div>
+</body>
+</html>

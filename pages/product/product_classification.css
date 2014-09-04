@@ -1,0 +1,89 @@
+.product_nav{ width: 100%; height: 30px; position: relative; background: #333; margin-bottom: 10px;}
+.product_nav ul{ padding: 0px 10px; position: relative; overflow: hidden;}
+.product_nav ul li{ float: left; position: relative; display: block; cursor: pointer; height: 28px; margin: 1px;}
+.product_nav ul li:hover{ background: #fff;}
+.product_nav ul li:hover a{ color: #09f;}
+
+.product_nav ul li.active{ background: #fff;}
+.product_nav ul li.active a{ color: #09f;}
+.product_nav ul li a{ color: #fff; padding: 1px 12px; height: 26px; line-height: 26px; display: block; font-size: 14px; }
+
+
+.product_classification{ width: 860px; height: auto; margin:10px 20px;}
+
+.add_product_classification{ width: 100%; height: 30px; position: relative;}
+.add_product_classification a{float: right; padding-right: 5px; display:inline-block; height: 30px; line-height: 30px; padding-left: 20px; background:url("image/add-row.gif") no-repeat 0 6px;}
+
+.search_product_classification{ width: 100%; height: 30px; position: relative; margin: 10px 0;}
+.search_product_classification_search{ width: 400px; height: 30px; line-height: 30px; position: relative; float: left;}
+.search_product_classification_search span{ font-size: 12px;}
+.search_product_classification_search input{ font-size: 12px; width: 160px; height: 12px; line-height: 12px; padding: 6px;}
+.search_product_classification_search a{ display: inline-block; width: 60px; height: 14px; line-height: 14px; padding: 7px; font-size: 14px; background: #f00; color: #fff; text-align: center;}
+
+.search_product_classification_sort{ width: auto; height: 30px; line-height: 30px; position: relative; float: right;}
+.search_product_classification_sort a{ width: auto; height: 30px; line-height: 30px; font-size: 14px; padding: 0px 10px; background:#ff0000; color: #fff; display: inline-block;}
+
+
+.product_classification_list{ width: 858px; height: auto; position: relative;}
+.product_classification_detail:nth-child(odd){ background: #dde7f3;}
+.product_classification_title{ width: 100%; height: 30px; line-height: 30px; position: relative; border: 1px solid #AEB2BA;background: #F4F4F4;}
+.product_classification_detail{ width: 100%; height: 30px; line-height: 30px; position: relative; border: 1px solid #AEB2BA; margin-top: -1px;}
+
+.product_classification_dis{  float: left; width: 100px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
+.product_classification_name span{
+    display: block;
+    width: 90%;
+    padding: 0 5%;
+    height:30px;
+    line-height: 30px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    text-align: left;
+}
+.product_classification_dis a{
+    display: block;
+    width: 90%;
+    padding: 0 5%;
+    height:30px;
+    line-height: 30px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    text-align: center;
+}
+.product_classification_sort{  float: left; width: 120px; height: 30px; line-height: 30px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
+.product_classification_sort input{ width: 60%; height: 12px; line-height: 12px; padding: 4px;}
+
+
+.product_classification_name{ float: left; width: 433px; height: 30px; line-height: 30px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
+.product_classification_oper{float: left; width: 200px; height: 30px; line-height: 30px; text-align: center;}
+.product_classification_detail_edit{ display: inline-block; height: 30px; line-height: 30px; padding-left: 20px; background: url("image/edit.png") no-repeat 0 7px;}
+.product_classification_detail_del{ display: inline-block; height: 30px; line-height: 30px; padding-left: 20px; margin-left: 20px;  background: url("image/delete.gif") no-repeat 0 7px;}
+
+.add_product_classification_con{ position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: #000; opacity: 0.6; filter:alpha(opacity=60); display: none; }
+.add_product_classification_list{ width: 360px; height:180px; background: #fff; position: fixed; left: 50%; top: 50%; margin-left: -230px; margin-top: -140px; padding: 40px 50px;}
+
+.add_product_classification_protype,.add_product_classification_prelevel{ display: none;}
+.add_product_classification_namdiv{ margin-top: 20px;}
+.add_product_classification_namdiv,.add_product_classification_protype,.add_product_classification_prelevel{ width: 100%; height: auto; position: relative; overflow: hidden; margin-bottom: 20px;}
+.add_product_classification_namdiv span,.add_product_classification_protype span,.add_product_classification_prelevel span{float: left; font-size: 14px; display: inline-block;  height: 30px; line-height: 30px; text-align: right;}
+.add_product_classification_namdiv em{float: left; color: #f00; height: 30px; line-height: 30px; margin-left: 5px;}
+.add_product_classification_namdiv input{
+    float: left;
+    font-size: 14px;
+    width: 200px;
+    height: 16px;
+    line-height: 16px;
+    padding: 4px 10px;
+}
+.add_product_classification_namdiv p,.add_product_classification_introdiv p{float: left; padding-left: 80px; margin-top: 5px;}
+.add_product_classification_protype select,.add_product_classification_prelevel select{ display: inline-block; width: 100px; height: 30px; line-height: 30px; margin-top: 6px;}
+
+.add_product_classification_icondiv input{ float: left; height: 20px; line-height: 20px; padding: 5px;}
+.add_product_classification_introdiv textarea{ width: 260px; height: 70px; float: left; margin-top: 5px;}
+
+.add_product_classification_btn{ width: 70%; height: 30px; line-height: 30px; margin: 30px 15%; text-align:center;}
+.add_product_classification_btn a{ display: inline-block; padding: 0 10px; height: 30px; line-height: 30px; text-align: center; background: #09f; color: #fff; font-size: 16px; margin-right:20px;}
+#add_product_classification_del{ width: 16px; height: 16px; display: inline-block; background: url("image/cancel.png") no-repeat 0 0; position: absolute; top: 5px; right: 5px;}
+
