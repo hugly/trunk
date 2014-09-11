@@ -41,7 +41,7 @@
 
 
 .product_review{
-    width: 880px;
+    width: 860px;
     height: auto;
     margin:10px;
 }
@@ -84,7 +84,7 @@
 }
 
 .product_review_list{
-    width: 878px;
+    width: 858px;
     height: auto;
     position: relative;
 }
@@ -124,7 +124,7 @@
 }
 .product_review_username{
     float: left;
-    width: 140px;
+    width: 200px;
     border-right: 1px solid #AEB2BA;
     text-align: center;
     position: relative;
@@ -180,7 +180,7 @@
 
 .prodcut_review_content{
     float: left;
-    width: 130px;
+    width: 200px;
     height: 100%;
     text-align: center;
     border-right: 1px solid #AEB2BA;

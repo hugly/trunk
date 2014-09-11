@@ -13,7 +13,7 @@ titleDetail=[
     {title:"出现概率",type:"word",width:60,key:"AwardAwardProbalityValue"},
     {title:"每天最大出现",type:"word",width:80,key:"AwardCount"},
     {title:"今天出现",type:"word",width:60,key:"AppearCount"},
-    {title:"操作",type:"operaType",width:136,key:"",fun:[aa],opera:["编辑"]}
+    {title:"操作",type:"operaType",width:136,fun:[aa],opera:["编辑"]}
 ];
 data=[];
 //编辑
@@ -63,10 +63,11 @@ TROPHY={
             oListDis=$("#listDisplay");
 
         dataArr=this.getArrByURL(window.location.href) || [];
-        this.gameId=dataArr[0];
-        this.awardType=dataArr[1];
-        this.awardState=dataArr[2];
-        this.awardShow=dataArr[3];
+
+        this.gameId=dataArr[1];
+        this.awardType=dataArr[2];
+        this.awardState=dataArr[3];
+        this.awardShow=dataArr[4];
 
         oGame.val(this.gameId);
         oAwardType.val(this.awardType);
@@ -220,23 +221,29 @@ TROPHY={
             gamelist=[],
             gameAwardList=[],
             AwardStatus=[
-                {id:0,val:"无效",select:true},
-                {id:1,val:"有效",select:false}
+                {id:1,val:"有效",select:true},
+                {id:0,val:"无效",select:false}
             ],
             AwardShow=[
-                {id:0,val:"不显示",select:true},
-                {id:1,val:"显示",select:false}
+                {id:1,val:"显示",select:true},
+                {id:0,val:"不显示",select:false}
             ],
             AwardIconSmallPicUrl=[],
-            AwardIconPicUrl=[];
+            AwardIconPicUrl=[],
+            word="";
 
             this.gameList=this.initSelect(this.gameList);
             this.gameAwardList=this.initSelect(this.gameAwardList);
+        if(data){
+            word="编辑游戏奖励";
+        }else{
+            word="添加游戏奖励";
+        }
 
         $.openDiv({
             width:820,
             height:500,
-            title:"添加游戏奖励",
+            title:word,
             div:div
         });
         if(data){
@@ -344,22 +351,30 @@ TROPHY={
                     {
                         title:"PC端图片",
                         type:"imageUpload",
-                        id:"AwardIconSmallPicUrl",
+                        id:"AwardIconPicUrl",
                         msg:"请上传一张奖品背景图,大小小于500k。格式:.jpg,.png。",
-                        isMust:false,
+                        isMust:true,
                         maxNumber:1,
-                        val:AwardIconSmallPicUrl
+                        val:AwardIconPicUrl
                     },
                     //imageUpload
                     {
                         title:"弹窗图片",
                         type:"imageUpload",
-                        id:"AwardIconPicUrl",
+                        id:"AwardIconSmallPicUrl",
                         msg:"请上传一张奖品背景图,大小小于500k。格式:.jpg,.png。",
-                        isMust:false,
+                        isMust:true,
                         maxNumber:1,
-                        val:AwardIconPicUrl
+                        val:AwardIconSmallPicUrl
                     }
+//                    {
+//                        title:"规则详情",
+//                        type:"superTextArea",
+//                        id:"test6",
+//                        msg:"43123123123123123123123",
+//                        isMust:true,
+//                        val:"test"
+//                    }
                 ],
                 body:div
             });
@@ -437,8 +452,8 @@ TROPHY={
                         msg:"",
                         isMust:true,
                         val:[
-                            {id:0,val:"无效",select:true},
-                            {id:1,val:"有效",select:false}
+                            {id:1,val:"有效",select:true},
+                            {id:0,val:"无效",select:false}
                         ]
                     },
                     //select
@@ -449,30 +464,30 @@ TROPHY={
                         msg:"奖品在列表中是否显示",
                         isMust:true,
                         val:[
-                            {id:0,val:"不显示",select:true},
-                            {id:1,val:"显示",select:false}
+                            {id:1,val:"显示",select:true},
+                            {id:0,val:"不显示",select:false}
                         ]
                     },
                     //imageUpload
                     {
                         title:"PC端图片",
                         type:"imageUpload",
-                        id:"AwardIconSmallPicUrl",
+                        id:"AwardIconPicUrl",
                         msg:"请上传一张奖品背景图,大小小于500k。格式:.jpg,.png。",
-                        isMust:false,
+                        isMust:true,
                         maxNumber:1,
-                        val:[]
+                        val:AwardIconPicUrl
                     },
-                    //imageUpload
                     {
                         title:"弹窗图片",
                         type:"imageUpload",
-                        id:"AwardIconPicUrl",
+                        id:"AwardIconSmallPicUrl",
                         msg:"请上传一张奖品背景图,大小小于500k。格式:.jpg,.png。",
-                        isMust:false,
+                        isMust:true,
                         maxNumber:1,
-                        val:[]
+                        val:AwardIconSmallPicUrl
                     }
+
                 ],
                 body:div
             });
@@ -579,7 +594,7 @@ TROPHY={
             awardStatus=oParent.find("#awardState").val(),
             awardShow=oParent.find("#listDisplay").val();
 
-        window.location.href="trophy.html?gameId="+gameId+"&awardType="+awardType+"&awardStatus="+awardStatus+"&awardShow="+awardShow;
+        window.location.href="trophy.html?mainid=7&gameId="+gameId+"&awardType="+awardType+"&awardStatus="+awardStatus+"&awardShow="+awardShow;
     },
     //根据URL取出相关字段数组
     getArrByURL:function(url){

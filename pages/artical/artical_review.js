@@ -11,7 +11,9 @@ artical_review={
     //初始化
     init:function(){
         if(window.location.href.indexOf("=")!=-1){
-            this.rehref=decodeURI(window.location.href.substring(window.location.href.indexOf("=")+1));
+            var href="";
+            href=window.location.href.substring(window.location.href.indexOf("=")+1);
+            this.rehref=decodeURI(href.substring(href.indexOf("=")+1));
         }
         this.initValue();
         this.scrollLoading();
@@ -60,7 +62,7 @@ artical_review={
     },
     //数据内容填充
     fillData:function(oParent,obj,data){
-        var show=data.IsShow?"不显示":"显示";
+        var show=data.IsShow?"显示":"不显示";
 
         oParent.find(".artical_review_detail").each(function(i){
             obj.find(".artical_review_reivewid span").text(i+1);
@@ -86,7 +88,7 @@ artical_review={
     //查询事件
     search:function(){
         this.rehref=$(".search_artical_review_search_pro").attr("value");
-        window.location.href="artical_review.html?searchKey="+this.rehref;
+        window.location.href="artical_review.html?mainid=1&searchKey="+this.rehref;
     },
     //根据id返回当前isshow
     getIsShow:function(id){
@@ -116,7 +118,7 @@ artical_review={
                 showState:dis      //@param:int 显示状态  1:显示 0:不显示
             },
             callback:function(rs){
-                var show=dis?"不显示":"显示";
+                var show=dis?"显示":"不显示";
                 $(obj).text(show);
                 dis=$(obj).parent().parent().attr({"dis":dis})
             }

@@ -26,7 +26,9 @@ product_contrast={
     //初始化函数
     init:function(){
         if(window.location.href.indexOf("=")!=-1){
-            this.rehref=decodeURI(window.location.href.substring(window.location.href.indexOf("=")+1));
+            var href="";
+            href=window.location.href.substring(window.location.href.indexOf("=")+1);
+            this.rehref=decodeURI(href.substring(href.indexOf("=")+1));
         }
         this.initValue();
         this.getData();
@@ -151,7 +153,7 @@ product_contrast={
     //搜索筛选列表
     screenDetail:function(obj){
         this.rehref=$(obj).prev().val();
-        window.location.href="product_contrast.html?searchKey="+this.rehref;
+        window.location.href="product_contrast.html?mainid=2&searchKey="+this.rehref;
     },
     //选择是否显示
     chooseDis:function(obj){

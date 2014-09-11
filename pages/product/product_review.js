@@ -12,7 +12,9 @@ product_review={
     //初始化
     init:function(){
         if(window.location.href.indexOf("=")!=-1){
-            this.keyword=decodeURI(window.location.href.substring(window.location.href.indexOf("=")+1));
+            var href="";
+            href=window.location.href.substring(window.location.href.indexOf("=")+1);
+            this.keyword=decodeURI(href.substring(href.indexOf("=")+1));
         }
         $("#search_product_review_search_pro").val(this.keyword);
         this.getData();
@@ -104,7 +106,7 @@ product_review={
     //搜索
     searchEvent:function(){
         this.keyword=$("#search_product_review_search_pro").val();
-        window.location.href="product_review.html?keyword="+this.keyword;
+        window.location.href="product_review.html?mainid=2&keyword="+this.keyword;
     },
     //是否显示函数
     isDisfun:function(obj){

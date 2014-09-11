@@ -73,9 +73,9 @@ RULE_LIST={
             valueArr=[];
         valueArr=this.getArrByURL(window.location.href);
 
-        this.searchKey=decodeURI(valueArr[1]);
-        this.changeID=valueArr[2];
-        this.roleID=valueArr[3];
+        this.searchKey=decodeURI(valueArr[2]);
+        this.changeID=valueArr[3];
+        this.roleID=valueArr[4];
 
 
         if(this.searchKey=="undefined"){
@@ -139,7 +139,7 @@ RULE_LIST={
         this.changeID=$("#search_rule_change_type").find("option:checked").attr("id");
         this.roleID=$("#search_rule_role_type").find("option:checked").attr("id");
 
-        window.location.href="rule_list.html?mainid=8&searchkey="+this.searchKey+"&changeID="+this.changeID+"&roleID="+this.roleID;
+        window.location.href="rule_list.html?mainid=8&mainid=8&searchkey="+this.searchKey+"&changeID="+this.changeID+"&roleID="+this.roleID;
     },
     //根据id确定选中得option
     getOptionByID:function(id,obj){
@@ -354,7 +354,7 @@ RULE_LIST={
 //      {id:1,val:"普通/全部任务",select:false}
 
         var arr=[];
-        arr.push({id:-1,val:"请选择",select:true});
+        arr.push({id:-2,val:"请选择",select:true});
         for(var i= 0,j=data.length;i<j;i++){
             var c={};
             c.id=data[i].SwitchPositionId;

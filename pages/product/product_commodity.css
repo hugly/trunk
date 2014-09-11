@@ -28,13 +28,13 @@
 .product_commodity_select input{ display: block; width: 12px; height: 12px; margin: 15px 13px; }
 
 .product_commodity_addContrast{float: left; width: 60px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
-.product_commodity_dis{float: left; width: 50px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
+.product_commodity_dis{float: left; width: 57px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
 
-.product_commodity_consu{float: left; width: 50px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
+.product_commodity_consu{float: left; width: 57px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
 
-.product_commodity_sort{float: left; width: 50px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
+.product_commodity_sort{float: left; width: 57px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
 
-.product_commodity_addData{float: left; width: 99px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
+.product_commodity_addData{float: left; width: 83px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
 .product_commodity_code{float: left; width: 60px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
 .product_commodity_price{float: left; width: 60px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
 .porduct_commodity_protype{float: left; width: 70px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
@@ -44,9 +44,9 @@
 
 .product_commodity_name{
     float: left; width: 120px; border-right: 1px solid #AEB2BA; text-align: center; position: relative;}
-.product_commodity_sort span,.product_commodity_addContrast a,.product_commodity_dis a,.product_commodity_name a,.product_commodity_addData span,.product_commodity_code span,.product_commodity_price span,.porduct_commodity_protype span{ display: block; width: 90%; padding: 0 5%; height:42px; line-height: 42px; white-space:nowrap;overflow:hidden;text-overflow:ellipsis; text-align: left; }
+.product_commodity_consu a,.product_commodity_sort span,.product_commodity_addContrast a,.product_commodity_dis a,.product_commodity_name a,.product_commodity_addData span,.product_commodity_code span,.product_commodity_price span,.porduct_commodity_protype span{ display: block; width: 90%; padding: 0 5%; height:42px; line-height: 42px; white-space:nowrap;overflow:hidden;text-overflow:ellipsis; text-align: left; }
 .product_commodity_oper{
-    float: left; width: 116px; text-align: center;}
+    float: left; width: 112px; text-align: center;}
 .add_product_contrast_con{ position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: #000; opacity: 0.6; filter:alpha(opacity=60); display:
 none; }
 

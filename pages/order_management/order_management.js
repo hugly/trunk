@@ -89,12 +89,14 @@ ORDER_MANAGEMENT={
             this_obj2.attr({id:"list_"+this_data.OrderId});
             this_obj2.find(".order_list0").html("<input type='checkbox' value='"+this_data.OrderId+"' name='list_check'>"+this_data.OrderNumber);
             this_obj2.find(".order_list1").text(this_data.Username);
-            this_obj2.find(".order_list2").text(this_data.RealName).attr({address:this_data.Address,area:this_data.ShippingRegion,orderid:this_data.OrderId});
+//            this_obj2.find(".order_list2").text(this_data.RealName).attr({address:this_data.Address,area:this_data.ShippingRegion,orderid:this_data.OrderId});
+            this_obj2.find(".order_list2").text(this_data.RealName);
+            this_obj2.find(".order_list2").attr({address:this_data.Address,area:this_data.ShippingRegion,orderid:this_data.OrderId});
             this_obj2.find(".order_list3").text(time);
             if(this_data.Remark){
                 this_obj2.find(".order_list4").text(this_data.Remark);
             }else{
-                this_obj2.find(".order_list4").text("其它方式");
+                this_obj2.find(".order_list4").text("抢购获得");
             }
 
             this_obj2.find(".order_list5").text(top.AJAX.OrderType[this_data.OrderType]).attr({_type:this_data.OrderType});
@@ -201,7 +203,7 @@ ORDER_MANAGEMENT={
             type = $("#order_manange_search_type").val(),
             type1 = $("#order_manange_search_type1").val();
 
-        window.location.href = "order_management.html?search="+val+"&type="+type+"&type1="+type1;
+        window.location.href = "order_management.html?mainid=4&search="+val+"&type="+type+"&type1="+type1;
     },
     //导出格式事件选项卡
     exportFileShow:function(type){

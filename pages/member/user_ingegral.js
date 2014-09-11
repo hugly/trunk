@@ -24,9 +24,13 @@ USERINGEGRAL={
     init:function(){
         var dataArr=[];
         dataArr=this.getArrByUrl(window.location.href);
-        this.searchKey=dataArr[0];
-        this.startTime=dataArr[1] || "";
-        this.endTime=dataArr[2] || "";
+        if(dataArr.length>1){
+            this.searchKey=dataArr[1];
+            this.startTime=dataArr[2] || "";
+            this.endTime=dataArr[3] || "";
+        }else{
+            this.searchKey=dataArr[0];
+        }
         if(this.startTime!=""){
             $("#search_user_ingegral_start_time").val($.stamp2date(this.startTime));
         }else{
@@ -112,7 +116,7 @@ USERINGEGRAL={
         if(this.endTime==-2211782400000){
             this.endTime="";
         }
-        window.location.href="user_ingegral.html?id="+this.searchKey+"&begTime="+this.startTime+"&endTime="+this.endTime;
+        window.location.href="user_ingegral.html?mainid=9&id="+this.searchKey+"&begTime="+this.startTime+"&endTime="+this.endTime;
     },
     //解析url里面得数据
     getArrByUrl:function(url){

@@ -47,7 +47,7 @@ CREATE_LIST={
     },
     //绑定页面数据
     bindData:function(obj,titleDetail,data){
-        var str=null,
+        var str,
             key="",
             href="",
             cssStr="float:left; border-right:1px solid #aeb2ba; text-align:center; position:relative;";
@@ -63,7 +63,7 @@ CREATE_LIST={
                     str=this.wordType(data[key]);
                     break;
                 case "link":
-                    str=this.linkType("javscript:;",data[key],titleDetail[i].fun);
+                    str=this.linkType("javascript:;",data[key],titleDetail[i].fun);
                     break;
                 case "img":
                     str=this.imgType(120,40,data[key]);
@@ -217,7 +217,7 @@ CREATE_LIST={
     },
     //显示状态类型   eg:ture:显示 false:不显示
     disType:function(href,data1,fun,aValue){
-        href=href || "javscript:;";
+        href=href || "javascript:;";
         var isShow="",
             str="",
             linkCss="display:block; width:90%; padding:0 5%; height:42px; line-height:42px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; text-align:center; cursor:pointer;";
@@ -246,15 +246,3 @@ CREATE_LIST={
         }
     }
 };
-
-
-
-
-
-
-
-
-
-
-
-

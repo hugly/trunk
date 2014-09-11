@@ -30,7 +30,9 @@ PRODUCTEXCHANGE={
     //初始化
     init:function(){
         if(window.location.href.indexOf("productName")!=-1){
-            this.href=decodeURI(window.location.href.substring(window.location.href.indexOf("=")+1));
+            var href="";
+            href=window.location.href.substring(window.location.href.indexOf("=")+1);
+            this.href=decodeURI(href.substring(href.indexOf("=")+1));
         }
         $(".search_product_exchange_search_pro").val(this.href);
         this.getExchangeList();
@@ -225,7 +227,7 @@ PRODUCTEXCHANGE={
     //查询
     searchPro:function(obj){
         this.href=$(obj).prev().val();
-        window.location.href="product_exchange.html?productName="+this.href;
+        window.location.href="product_exchange.html?mainid=2&productName="+this.href;
 
     },
     //将data输出成select菜单

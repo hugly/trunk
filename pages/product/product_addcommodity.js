@@ -152,9 +152,18 @@ product_addcommodity={
     arrRidd:function(arr){
         var result=[];
         for(var i=0;i<arr.length;i++){
-            if(result.indexOf(arr[i])==-1){
+            if(result.length==0){
                 result.push(arr[i]);
+            }else{
+                for(var j=0;j<result.length;j++){
+                    if(result[j]!=arr[i]){
+                        result.push(arr[i]);
+                    }
+                }
             }
+//            if(result.indexOf(arr[i])==-1){
+//                result.push(arr[i]);
+//            }
         }
         return result;
     },

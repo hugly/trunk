@@ -39,9 +39,8 @@ NUMBERMANAGEMENT={
         var _this=this;
         top.AJAX.initalGameSetting({
             callback:function(rs){
-                if(rs.State==1){
-                    _this.getGameList();
-                }
+                alert("初始化完成!");
+                _this.getGameList();
             }
         });
     },
@@ -51,6 +50,7 @@ NUMBERMANAGEMENT={
             callback:function(rs){
                 data=rs;
                 var oParent=$("#number_management_list_layer");
+                oParent.html("");
                 CREATE_LIST.init(oParent);
             }
         });
@@ -187,6 +187,14 @@ NUMBERMANAGEMENT={
                     isMust:false,
                     maxNumber:1,
                     val:PcSponsorProductIconUrl
+                },
+                {
+                    title:"规则简介",
+                    type:"textarea",
+                    id:"RuleDesc",
+                    msg:"",
+                    isMust:false,
+                    val:data.RuleDesc
                 }
             ],
             body:div
@@ -260,10 +268,10 @@ NUMBERMANAGEMENT={
                 RestrictType:RestrictType,
                 PcSponsorIconUrl:PcSponsorIconUrl,
                 PcSponsorProductIconUrl:PcSponsorProductIconUrl,
-                UploadPageUrl:UploadPageUrl
+                UploadPageUrl:UploadPageUrl,
+                PcBackIconUrl:PcBackIconUrl
             };
             dataJson= $.extend(this.EditDetail.getData(),oldJson);
-
             if(this.dataCheck(MaxPlayCount,formData)){
                 top.AJAX.modifyCompanyGameSetting({
                     data:dataJson,

@@ -8,55 +8,57 @@ $(document).ready(function(){
 
 
 ORDER_MANAGE_COUPON = {
-    //Êý¾Ý
+    //ï¿½ï¿½ï¿½
     data: null,
-    //¹Ø¼ü×Ö
+    //ï¿½Ø¼ï¿½ï¿½ï¿½
     rehref: "",
-    //³õÊ¼»¯
+    //ï¿½ï¿½Ê¼ï¿½ï¿½
     init: function () {
         var _this = this;
-        //ÊÂ¼þ°ó¶¨
+        //ï¿½Â¼ï¿½ï¿½ï¿½
         this.bindEvent();
         if (window.location.href.indexOf("=") != -1) {
-            this.rehref = decodeURIComponent(window.location.href.substring(window.location.href.indexOf("=") + 1));
+            var href="";
+            href=window.location.href.substring(window.location.href.indexOf("=") + 1);
+            this.rehref = decodeURIComponent(href.substring(href.indexOf("=") + 1));
         }
         this.initValue();
         $.scrollLoadInterval({
-            runIn: this,                               //¼Ó¸ö»Øµ÷Ö´ÐÐ¶ÔÏó
-            mainDiv: $(".list_coupon_info"),                        //@param:jqobj     ÁÐ±íÐèÒª²åÈëµÄobj
-            buttonLength: 200,                         //@param:int       ¾àÀëµ×²¿¶àÉÙ¿ªÊ¼¼ÓÔØÊý¾Ý,Ä¬ÈÏ200
-            getDataApiName: "getCouponList",          //@param:str       µ÷ÓÃµÄapi½Ó¿ÚÃû
-            bindDataFn:this.bindData,                  //@param:function Êý¾Ý°ó¶¨º¯Êý
-            scrollForKey: "CouponId",                 //@param:str       ¹ö¶¯¼ÓÔØÐèÒªµÄkey
+            runIn: this,                               //ï¿½Ó¸ï¿½ï¿½Øµï¿½Ö´ï¿½Ð¶ï¿½ï¿½ï¿½
+            mainDiv: $(".list_coupon_info"),                        //@param:jqobj     ï¿½Ð±ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½obj
+            buttonLength: 200,                         //@param:int       ï¿½ï¿½ï¿½ï¿½×²ï¿½ï¿½ï¿½ï¿½Ù¿ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,Ä¬ï¿½ï¿½200
+            getDataApiName: "getCouponList",          //@param:str       ï¿½ï¿½ï¿½Ãµï¿½apiï¿½Ó¿ï¿½ï¿½ï¿½
+            bindDataFn:this.bindData,                  //@param:function ï¿½ï¿½Ý°ó¶¨ºï¿½ï¿½ï¿½
+            scrollForKey: "CouponId",                 //@param:str       ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½key
             searchData: {
-                searchKey: _this.rehref                          //@param:str        //²éÑ¯ÊäÈëµÄÎÄ×Ö
+                searchKey: _this.rehref                          //@param:str        //ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             }
         });
     },
-    //³õÊ¼»¯ËÑË÷¿òµÄÖµ
+    //ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
     initValue: function () {
         $(".input_list").attr({ "value": this.rehref });
     },
-    //½«Êý¾Ý°ó¶¨µ½DOMÉÏ
+    //ï¿½ï¿½ï¿½ï¿½Ý°ó¶¨µï¿½DOMï¿½ï¿½
     bindData:function(data) {
-        var parentDOM = $(".list_coupon_info");//ÁÐ±í¸¸¼¶
-        var sourcecloneItem = $("#div_clonedata");//ÐèÒª¿½±´µÄÁÐ±íItem
+        var parentDOM = $(".list_coupon_info");//ï¿½Ð±?ï¿½ï¿½
+        var sourcecloneItem = $("#div_clonedata");//ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½Item
         for (var i = 0; i < data.length; i++) {
             this.createDetail(data[i], parentDOM, sourcecloneItem);
         }
     },
-    //´´½¨ÁÐ±íÊý¾Ý
+    //ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ï¿½
     createDetail: function (data, oParent, oTem) {
-        //¿ËÂ¡µ±Ç°Êý¾Ý
+        //ï¿½ï¿½Â¡ï¿½ï¿½Ç°ï¿½ï¿½ï¿½
         var oTar = oTem.clone(true);
         $(oTar).removeAttr("id");
-        //¶Ôµ±Ç°½á¹¹ÄÚÈÝ½øÐÐÌî³ä
+        //ï¿½Ôµï¿½Ç°ï¿½á¹¹ï¿½ï¿½ï¿½Ý½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         this.fillData(oTar, data);
-        //²åÈëµ½ÏàÓ¦Î»ÖÃ
+        //ï¿½ï¿½ï¿½ëµ½ï¿½ï¿½Ó¦Î»ï¿½ï¿½
         oTar.show().appendTo(oParent);
        
     },
-    //½«µ¥ÌõItemÊý¾ÝÌî³äÖÁ¶ÔÓ¦µÄDOMÔªËØ
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Itemï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½DOMÔªï¿½ï¿½
     fillData: function (obj, data) {
         for (var i = 0; i < $(obj).children().length; i++) {
             var childdom = $(obj).children(":eq(" + i + ")");
@@ -64,10 +66,10 @@ ORDER_MANAGE_COUPON = {
         }
     },
     formatGridCell: function (obj, data) {
-        var fieldtype = $(obj).attr("fieldtype");//Êý¾ÝÉùÃ÷µÄÀàÐÍ
-        var fieldname = $(obj).attr("fieldname");//Êý¾Ý¶ÔÓ¦µÄ×Ö¶ÎÃû³Æ
-        var fieldformat = $(obj).attr("fieldformat");//Êý¾Ý¶ÔÓ¦µÄÊä³ö×Ö·û´®
-        var fielddisplayname = $(obj).attr("fielddisplayname");//ÏÔÊ¾µÄÊý¾Ý¶ÔÓ¦µÄ×Ö¶ÎÃû³Æ
+        var fieldtype = $(obj).attr("fieldtype");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        var fieldname = $(obj).attr("fieldname");//ï¿½ï¿½Ý¶ï¿½Ó¦ï¿½ï¿½ï¿½Ö¶ï¿½ï¿½ï¿½ï¿½
+        var fieldformat = $(obj).attr("fieldformat");//ï¿½ï¿½Ý¶ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½
+        var fielddisplayname = $(obj).attr("fielddisplayname");//ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ý¶ï¿½Ó¦ï¿½ï¿½ï¿½Ö¶ï¿½ï¿½ï¿½ï¿½
         var fieldvalue = "";
         if (fieldtype != undefined) {
             switch (fieldtype) {
@@ -78,7 +80,7 @@ ORDER_MANAGE_COUPON = {
                     fieldvalue = $.stamp2date(data[fieldname]);
                     break;
                 case "bool":
-                    fieldvalue = data[fieldname] == "0" ? "Î´Ê¹ÓÃ" : "ÒÑÊ¹ÓÃ";
+                    fieldvalue = data[fieldname] == "0" ? "Î´Ê¹ï¿½ï¿½" : "ï¿½ï¿½Ê¹ï¿½ï¿½";
                     break;
                 default:
             }
@@ -95,33 +97,33 @@ ORDER_MANAGE_COUPON = {
        var _this = this;
        var oDel = $(".list_detail_del");
        var oSearch = $(".input_search");
-        //É¾³ýÊÂ¼þ°ó¶¨
+        //É¾ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½
          oDel.click(function () {
              _this.delaction(this);
          });
-        //ËÑË÷ÊÂ¼þ°ó¶¨
+        //ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½
          oSearch.click(function () {
              _this.search();
          });
     },
-    //É¾³ýÊÂ¼þ
+    //É¾ï¿½ï¿½ï¿½Â¼ï¿½
     delaction: function (obj) {
         //alert($(obj).parent().parent().find("input").val());
         top.AJAX.delCoupon({
             data: {
                 couponId: $(obj).parent().parent().find("input").val()
             },
-            callback: function () {      //@param:fn    »ñÈ¡Êý¾Ý³É¹¦Ö´ÐÐ
-                if (confirm("È·¶¨ÒªÉ¾³ýÊý¾ÝÂð£¿")) {
+            callback: function () {      //@param:fn    ï¿½ï¿½È¡ï¿½ï¿½Ý³É¹ï¿½Ö´ï¿½ï¿½
+                if (confirm("È·ï¿½ï¿½ÒªÉ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")) {
                     $(obj).parent().parent().remove();
                 }
             }
         });
     },
-    //²éÑ¯ÊÂ¼þ
+    //ï¿½ï¿½Ñ¯ï¿½Â¼ï¿½
     search: function () {
         this.rehref = $(".input_list").attr("value");
-        window.location.href = "order_manage_coupon.html?searchKey=" + encodeURIComponent(this.rehref);
+        window.location.href = "order_manage_coupon.html?mainid=4&searchKey=" + encodeURIComponent(this.rehref);
     }
 };
 

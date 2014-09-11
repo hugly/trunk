@@ -362,10 +362,10 @@
     margin-left: 10px;
 }
 .js_bind_product_img{
-    height: 110px; margin-top: 10px; position: relative;
+    height: 110px; margin-top: 10px;
 }
 .js_bind_product_img img{
-    position: absolute; left: 80px; top: 0;
+    margin-left: 10px;
 }
 
 

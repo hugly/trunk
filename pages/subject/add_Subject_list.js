@@ -98,11 +98,10 @@ ADDSUBJECTLIST={
             endTime="",
             showOrder=0;
 
-
-            if(CurrentThemeData.CreateTime==undefined){
+            if(CurrentThemeData.StartDate==undefined){
                 createTime="";
             }else{
-                createTime= $.stamp2date(CurrentThemeData.CreateTime);
+                createTime= $.stamp2date(CurrentThemeData.StartDate);
             }
 
             if(CurrentThemeData.ShowOrder==undefined){
@@ -125,7 +124,7 @@ ADDSUBJECTLIST={
                     type:"text",
                     id:"ActivityName",
                     msg:"",
-                    isMust:false,
+                    isMust:true,
                     val:CurrentThemeData.ActivityName
                 }
             ],
@@ -220,7 +219,7 @@ ADDSUBJECTLIST={
                     title:"链接地址",
                     type:"text",
                     id:"ActivityUrl",
-                    msg:"",
+                    msg:"未使用模板格式为：“http://www.xxx.com”,使用模板格式为：“xxx”",
                     isMust:true,
                     val:CurrentThemeData.ActivityUrl
                 },
@@ -262,7 +261,7 @@ ADDSUBJECTLIST={
                 },
                 {
                     title:"简介",
-                    type:"superTextArea",
+                    type:"textarea",
                     id:"Summary",
                     msg:"限制在1000个字符以内。",
                     isMust:false,
@@ -631,8 +630,18 @@ ADDSUBJECTLIST={
             ActivityImage.push(this.dataInToJson(dataCC.UploadPathsmall[0]));
         }
 
-        DStartDate= $.time2stamp(dataCC.StartDate);
-        DEndDate= $.time2stamp(dataCC.EndDate);
+        if(dataCC.StartDate){
+            DStartDate= $.time2stamp(dataCC.StartDate);
+        }else{
+            DStartDate="";
+        }
+        if(dataCC.EndDate){
+            DEndDate= $.time2stamp(dataCC.EndDate);
+        }else{
+            DEndDate="";
+        }
+
+
         ShowOrder=parseInt(dataCC.ShowOrder);
 
         var data={};
@@ -651,27 +660,31 @@ ADDSUBJECTLIST={
             {"EndDate":DEndDate},
             {"ShowOrder":ShowOrder}
         );
-        if(this.pageType=="add"){
-            top.AJAX.addShopSpecialDetail({
-                data:data,
-                callback:function(){
-                    alert("添加成功!");
-                    top.O2O.refreshWindow("6");
-                    top.O2O.closeWindow("subAdd");
-                }
-            });
+        if(DEndDate>DStartDate){
+            if(this.pageType=="add"){
+                top.AJAX.addShopSpecialDetail({
+                    data:data,
+                    callback:function(){
+                        alert("添加成功!");
+                        top.O2O.refreshWindow("6");
+                        top.O2O.closeWindow("subAdd");
+                    }
+                });
+            }else{
+                var EditData={},
+                    ActivityId=rs.ActivityId;
+                EditData= $.extend(data,{"ActivityId":ActivityId});
+                top.AJAX.editShopSpecialDetail({
+                    data:EditData,
+                    callback:function(){
+                        alert("修改成功!");
+                        top.O2O.refreshWindow("6");
+                        top.O2O.closeWindow("subEdit");
+                    }
+                });
+            }
         }else{
-              var EditData={},
-                  ActivityId=rs.ActivityId;
-              EditData= $.extend(data,{"ActivityId":ActivityId});
-            top.AJAX.editShopSpecialDetail({
-                data:EditData,
-                callback:function(){
-                    alert("修改成功!");
-                    top.O2O.refreshWindow("6");
-                    top.O2O.closeWindow("subEdit");
-                }
-            });
+            alert("结束时间必须大于开始时间!");
         }
     },
     //组装模板属性数据

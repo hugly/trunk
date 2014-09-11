@@ -17,28 +17,27 @@ $(document).ready(function(){
 });
 AWARDRECORD={
     gameID:0,
-    memberID:"",
+    memberID:0,
     memberName:"",
     startData:"",
     endData:"",
     //初始化
     init:function(){
         var arr=this.getArrByURL(window.location.href) || [];
-
-        if(arr[0]){
-            this.gameID=arr[0];
-        }
         if(arr[1]){
-            this.memberID=parseInt(arr[1]);
+            this.gameID=arr[1];
         }
         if(arr[2]){
-            this.memberName=decodeURI(arr[2]);
+            this.memberID=parseInt(arr[2]);
         }
         if(arr[3]){
-            this.startData= parseInt(arr[3]);
+            this.memberName=decodeURI(arr[3]);
         }
         if(arr[4]){
-            this.endData= parseInt(arr[4]);
+            this.startData= parseInt(arr[4]);
+        }
+        if(arr[5]){
+            this.endData= parseInt(arr[5]);
         }
 
         this.bindDateControl();
@@ -50,7 +49,12 @@ AWARDRECORD={
     initCheckViews:function(){
         var oParent=$("#award_records_list");
         oParent.find("#blongsGame").val(this.gameID);
-        oParent.find(".search_award_records_list_search_ID").val(this.memberID);
+        if(this.memberID==0){
+            oParent.find(".search_award_records_list_search_ID").val("");
+        }else{
+            oParent.find(".search_award_records_list_search_ID").val(this.memberID);
+        }
+
         oParent.find(".search_award_records_list_search_Name").val(this.memberName);
         if(this.startData){
             oParent.find("#search_award_records_list_search_StartTime").val($.stamp2date(this.startData));
@@ -153,14 +157,26 @@ AWARDRECORD={
     },
     //搜索
     searchEvent:function(obj){
-        var oParent=$(obj).parent();
+        var oParent=$(obj).parent(),
+            startData,
+            endData;
         this.gameID=oParent.find("#blongsGame").val();
         this.memberID=oParent.find(".search_award_records_list_search_ID").val();
         this.memberName=oParent.find(".search_award_records_list_search_Name").val();
-        this.startData=$.time2stamp(oParent.find("#search_award_records_list_search_StartTime").val());
-        this.endData=$.time2stamp(oParent.find("#search_award_records_list_search_EndTiem").val());
+        startData=oParent.find("#search_award_records_list_search_StartTime").val();
+        endData=oParent.find("#search_award_records_list_search_EndTiem").val();
+        if(startData){
+            this.startData=$.time2stamp(startData);
+        }else{
+            this.startData=startData;
+        }
+        if(endData){
+            this.endData=$.time2stamp(endData);
+        }else{
+            this.endData=endData;
+        }
 
-        window.location.href="award_records.html?gameID="+this.gameID+"&memberID="+this.memberID+"&memberName="+this.memberName+"&startData="+this.startData+"&endData="+this.endData;
+        window.location.href="award_records.html?mainid=7&gameID="+this.gameID+"&memberID="+this.memberID+"&memberName="+this.memberName+"&startData="+this.startData+"&endData="+this.endData;
     },
     //根据URL取出相关字段数组
     getArrByURL:function(url){

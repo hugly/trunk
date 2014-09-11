@@ -40,10 +40,11 @@ function bb(obj,data){
 
 //显示/不显示
 function cc(obj,data){
+
     top.AJAX.modifySpecialDetail({
         data:{
             ActivityId:data.ActivityId,
-            IsTopShow:data.IsTopShow
+            IsTopShow:!data.IsTopShow
         },
         callback:function(){
             var dis=data.IsTopShow?"不显示":"显示";
@@ -74,10 +75,10 @@ SUBJECTLIST={
     getSearchKey:function(){
         var dataArr=[];
         dataArr=this.getArrByURL(window.location.href) || {};
-        dataArr[0]=dataArr[0] ||"";
         dataArr[1]=dataArr[1] ||"";
-        this.themeName=decodeURI(dataArr[0]);
-        this.tempName=decodeURI(dataArr[1]);
+        dataArr[2]=dataArr[2] ||"";
+        this.themeName=decodeURI(dataArr[1]);
+        this.tempName=decodeURI(dataArr[2]);
 
         $("#search_subject_list_subjectName").val(this.themeName);
         $("#search_subject_list_templateName").val(this.tempName);
@@ -134,7 +135,7 @@ SUBJECTLIST={
     search:function(obj){
         this.themeName=$("#search_subject_list_subjectName").val();
         this.tempName=$("#search_subject_list_templateName").val();
-        window.location.href="subject_list.html?themeName="+this.themeName+"&tempName="+this.tempName;
+        window.location.href="subject_list.html?mainid=6&themeName="+this.themeName+"&tempName="+this.tempName;
     },
     //根据URL取出相关字段数组
     getArrByURL:function(url){

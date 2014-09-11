@@ -12,7 +12,10 @@ artical_management={
     init:function(){
         var _this=this;
         if(window.location.href.indexOf("searchKey")!=-1){
-            this.rehref=decodeURI(window.location.href.substring(window.location.href.indexOf("=")+1));
+            var href="";
+            href=window.location.href.substring(window.location.href.indexOf("=")+1);
+            this.rehref=decodeURI(href.substring(href.indexOf("=")+1));
+            console.log(this.rehref);
         }
         this.initValue();
         //事件绑定
@@ -123,7 +126,7 @@ artical_management={
     //查询事件
     search:function(){
         this.rehref=$(".search_artical_management_search_pro").attr("value");
-        window.location.href="artical_management.html?searchKey="+this.rehref;
+        window.location.href="artical_management.html?mainid=1&searchKey="+this.rehref;
     }
 
 };

@@ -45,7 +45,6 @@
     font-weight: normal;
 }
 .product_addcommodity_infro_type select,.product_addcommodity_extend select,.add_product_addcommodity_goods_store select{
-    float: left;
     width: 120px;
     margin-top: 6px;
 }

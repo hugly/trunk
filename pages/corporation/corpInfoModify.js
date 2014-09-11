@@ -67,7 +67,7 @@ var CorpInfoModify = {
     },
     bindEvent: function () {
         var that = this;
-        $(".btn-submit").click(function (e) {
+        $(".btn-submit a").click(function (e) {
             e.preventDefault();
             var data = $("input,select,textarea").not(":file").serializeObject();
             data.UploadModel = that.getImageData();

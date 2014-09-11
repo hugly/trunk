@@ -18,7 +18,9 @@ product_commodity={
     //初始化
     init:function(){
         if(window.location.href.indexOf("searchKey")!=-1){
-            this.rehref=decodeURI(window.location.href.substring(window.location.href.indexOf("=")+1));
+            var href="";
+            href=window.location.href.substring(window.location.href.indexOf("=")+1);
+            this.rehref=decodeURI(href.substring(href.indexOf("=")+1));
         }
         this.initValue();
         this.getData();
@@ -302,9 +304,14 @@ product_commodity={
             contarstprice=[],
             contarstlink=[],
             contarstsort=[],
+            contarstShow=[],
             _this=this,
             arr=[],
             isGo=true;
+        $(obj).parent().find(".add_product_addcommodity_temeplete").each(function(){
+            contarstShow.push($(this).attr("dis"));
+        });
+
         $(obj).parent().find(".add_product_addcommodity_goods_s").each(function(){
             contarstname.push($(this).val());
         });
@@ -321,6 +328,8 @@ product_commodity={
         contarstprice.shift();
         contarstlink.shift();
         contarstsort.shift();
+        contarstShow.shift();
+
         for(var i= 0,l=contarstlink.length;i<l;i++){
             if(contarstname[i]=="<--请选择-->"){
                 contarstname[i]="";
@@ -331,6 +340,11 @@ product_commodity={
             c.Sort=contarstsort[i];
             c.SourcesOfPrice=contarstprice[i];
             c.PriceSourcesUrl=contarstlink[i];
+            if(contarstShow[i]=="true"){
+                c.IsShow=true;
+            }else{
+                c.IsShow=false;
+            }
             arr.push(c);
 
             if(contarstname[i]=="" || contarstprice[i]=="" || contarstlink[i]==""){
@@ -426,7 +440,7 @@ product_commodity={
     //搜索筛选列表
     screenDetail:function(obj){
         this.rehref=$(obj).prev().val();
-        window.location.href="product_commodity.html?searchKey="+this.rehref;
+        window.location.href="product_commodity.html?mainid=2&searchKey="+this.rehref;
     },
     //添加新商品函数
     addcommodity:function(){
