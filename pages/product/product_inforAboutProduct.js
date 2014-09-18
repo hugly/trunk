@@ -73,9 +73,9 @@ product_inforAboutProduct={
             oTar=null,
             oParent=$("#product_inforAboutProduct_content_right_template_layer");
 
-        oTar=oTem.clone(true);
-        oTar.removeAttr("id");
-        oTar.removeAttr("style");
+        oTar=oTem.clone(true).attr({"id":""}).css({"display":"block"});
+//        oTar.removeAttr("id");
+//        oTar.removeAttr("style");
         this.fillArticalData(oTar,data,titleData);
         oTar.appendTo(oParent);
 
@@ -103,9 +103,9 @@ product_inforAboutProduct={
             oTar=null,
             oParent=$("#product_inforAboutProduct_content_left_template_layer");
 
-        oTar=oTem.clone(true);
-        oTar.removeAttr("id");
-        oTar.removeAttr("style");
+        oTar=oTem.clone(true).attr({"id":""}).css({"display":"block"});
+//        oTar.removeAttr("id");
+//        oTar.removeAttr("style");
         this.bindAritcalData(oTar,data);
         oTar.appendTo(oParent);
 
@@ -175,9 +175,9 @@ product_inforAboutProduct={
             }
         });
         if(isGo){
-            oTar=oTem.clone(true);
-            oTar.removeAttr("id");
-            oTar.removeAttr("style");
+            oTar=oTem.clone(true).attr({"id":""}).css({"display":"block"});
+//            oTar.removeAttr("id");
+//            oTar.removeAttr("style");
             oTar.attr({"ArticleId":$(obj).parent().parent().attr("ArticleId")});
             oTar.find(".product_right_inforName span").text($(obj).parent().prev().find("span").text());
             oTar.appendTo(layer);

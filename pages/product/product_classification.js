@@ -35,9 +35,9 @@ product_classification={
     },
     //创建文档结构
     createDom:function(data,oParent,oTem){
-        var oTar=oTem.clone(true);
-        oTar.removeAttr("style");
-        oTar.removeAttr("id");
+        var oTar=oTem.clone(true).attr({"id":""}).css({"display":"block"});
+//        oTar.removeAttr("style");
+//        oTar.removeAttr("id");
         //对当前结构内容进行填充
         this.fillData(oTar,data);
         //插入到相应位置
@@ -113,9 +113,9 @@ product_classification={
     editProduct:function(obj,oZoom,oZoomCon){
         oZoom.css({"display":"block"});
         this.isAdd=false;
-        this.oTemzoom=oZoomCon.clone(true);
-        this.oTemzoom.removeAttr("style");
-        this.oTemzoom.removeAttr("id");
+        this.oTemzoom=oZoomCon.clone(true).attr({"id":""}).css({"display":"block"});
+//        this.oTemzoom.removeAttr("style");
+//        this.oTemzoom.removeAttr("id");
         this.oTemzoom.find(".add_product_classification_list_addcon").remove();
         this.editDataBind(this.oTemzoom,obj);
         this.classId=$(obj).parent().parent().attr("CategoryId");
@@ -190,10 +190,10 @@ product_classification={
     //新增事件
     addProduct:function(obj,oZoom,oZoomCon){
         oZoom.css({"display":"block"});
-        this.oTemzoom=oZoomCon.clone(true);
+        this.oTemzoom=oZoomCon.clone(true).attr({"id":""}).css({"display":"block"});
         this.isAdd=true;
-        this.oTemzoom.removeAttr("style");
-        this.oTemzoom.removeAttr("id");
+//        this.oTemzoom.removeAttr("style");
+//        this.oTemzoom.removeAttr("id");
         //插入到相应位置
         this.oTemzoom.insertAfter(oZoom);
     },

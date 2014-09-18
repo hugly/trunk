@@ -61,9 +61,9 @@ artical_Category={
     //创建文档结构
     createDetail:function(data,oParent,oTem){
         //克隆当前数据
-        var oTar=oTem.clone(true);
-        oTar.removeAttr("style");
-        oTar.removeAttr("id");
+        var oTar=oTem.clone(true).attr({"id":""}).css({"display":"block"});
+//        oTar.removeAttr("style");
+//        oTar.removeAttr("id");
         //对当前结构内容进行填充
         this.fillData(oTar,data);
         //插入到相应位置

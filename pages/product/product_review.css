@@ -190,7 +190,7 @@
     height: 30px;
     line-height: 30px;
     padding-left: 18px;
-    background: url("image/edit.png") no-repeat 0 7px;
+    background: url("images/edit.png") no-repeat 0 7px;
 }
 .product_review_detail_del{
     display: inline-block;
@@ -198,7 +198,7 @@
     line-height: 30px;
     padding-left: 18px;
     margin-left: 10px;
-    background: url("image/delete.gif") no-repeat 0 7px;
+    background: url("images/delete.gif") no-repeat 0 7px;
 }
 .prodcut_review_content span{
     display: block;

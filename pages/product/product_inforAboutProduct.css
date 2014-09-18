@@ -147,13 +147,13 @@
     display: inline-block;
     height: 100%;
     width: 100%;
-    background:url("image/back.png") no-repeat 13px 7px;
+    background:url("images/back.png") no-repeat 13px 7px;
 }
 .product_right_oper a{
     display: inline-block;
     height: 100%;
     width: 100%;
-    background:url("image/go.png") no-repeat 13px 7px;
+    background:url("images/go.png") no-repeat 13px 7px;
 }
 
 .product_inforAboutProduct_content_right{

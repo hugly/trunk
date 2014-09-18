@@ -72,9 +72,9 @@ product_commodity={
     },
     //创建商家比价的文档结构
     createContrastDom:function(data,oTem){
-        var oTar=oTem.clone(true);
-        oTar.removeAttr("style");
-        oTar.removeAttr("id");
+        var oTar=oTem.clone(true).attr({"id":""}).css({"display":"block"});
+//        oTar.removeAttr("style");
+//        oTar.removeAttr("id");
         //对当前结构内容进行填充
         this.fillContrastData(oTar,data);
         //插入到相应位置
@@ -105,9 +105,9 @@ product_commodity={
     },
     //创建文档结构
     createDom:function(data,oParent,oTem){
-        var oTar=oTem.clone(true);
-        oTar.removeAttr("style");
-        oTar.removeAttr("id");
+        var oTar=oTem.clone(true).attr({"id":""}).css({"display":"block"});
+//        oTar.removeAttr("style");
+//        oTar.removeAttr("id");
         //对当前结构内容进行填充
         this.fillData(oTar,data);
         //插入到相应位置
@@ -287,9 +287,9 @@ product_commodity={
             alert("不能创建更多的比价，因为你的比价商家数量小于你要创建的比价数量！");
         }else{
             var oTem=$(".add_product_addcommodity_temeplete").eq(1);
-            var oTar=oTem.clone(true);
-            oTar.removeAttr("id");
-            oTar.removeAttr("style");
+            var oTar=oTem.clone(true).attr({"id":""}).css({"display":"block"});
+//            oTar.removeAttr("id");
+//            oTar.removeAttr("style");
             oTar.find("input").removeAttr("readonly");
             oTar.find("input").css({"border":"1px solid #333"});
             oTar.find(".add_product_addcommodity_goods_dis a").text("显示")
@@ -430,9 +430,9 @@ product_commodity={
         $("#add_product_contrast_con").css({"display":"block"});
         //$("#add_product_addcommodity_goodslist").css({"display":"block"});
         var oTem=$("#add_product_addcommodity_goodslist");
-        var oTar=oTem.clone(true);
-        oTar.removeAttr("id");
-        oTar.removeAttr("style");
+        var oTar=oTem.clone(true).attr({"id":""}).css({"display":"block"});
+//        oTar.removeAttr("id");
+//        oTar.removeAttr("style");
         oTar.appendTo("body");
         this.getContarstList(oTar);
         this.productId=$(obj).parent().parent().attr("productid");

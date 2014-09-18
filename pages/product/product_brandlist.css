@@ -11,7 +11,7 @@
 .product_brandlist{ width: 780px; height: auto; margin:10px;}
 
 .add_product_brandlist{ width: 100%; height: 30px; position: relative;}
-.add_product_brandlist a{float: right; padding-right: 5px; display:inline-block; height: 30px; line-height: 30px; padding-left: 20px; background:url("image/add-row.gif") no-repeat 0 6px;}
+.add_product_brandlist a{float: right; padding-right: 5px; display:inline-block; height: 30px; line-height: 30px; padding-left: 20px; background:url("images/add-row.gif") no-repeat 0 6px;}
 
 .search_product_brandlist{ width: 100%; height: 30px; position: relative; margin: 10px 0;}
 .search_product_brandlist_search{ width: 400px; height: 30px; line-height: 30px; position: relative; float: left;}
@@ -37,8 +37,8 @@
 .product_brandlist_name span{display: block; width: 90%; padding: 0 5%; height:60px; line-height: 60px; white-space:nowrap;overflow:hidden;text-overflow:ellipsis; text-align: left;}
 .product_brandlist_oper{
     float: left; width: 197px; text-align: center;}
-.product_brandlist_detail_edit{ display: inline-block; height: 30px; line-height: 30px; padding-left: 20px; background: url("image/edit.png") no-repeat 0 7px;}
-.product_brandlist_detail_del{ display: inline-block; height: 30px; line-height: 30px; padding-left: 20px; margin-left: 20px;  background: url("image/delete.gif") no-repeat 0 7px;}
+.product_brandlist_detail_edit{ display: inline-block; height: 30px; line-height: 30px; padding-left: 20px; background: url("images/edit.png") no-repeat 0 7px;}
+.product_brandlist_detail_del{ display: inline-block; height: 30px; line-height: 30px; padding-left: 20px; margin-left: 20px;  background: url("images/delete.gif") no-repeat 0 7px;}
 
 .add_product_brandlist_con{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #000; opacity: 0.6; filter:alpha(opacity=60); display: none; }
 .add_product_brandlist_list{ width: 360px; height: 320px; background: #fff; position: absolute; left: 50%; top: 50%; margin-left: -230px; margin-top: -200px; padding: 40px 50px; display: none;}
@@ -52,5 +52,5 @@
 .add_product_brandlist_introdiv textarea{ width: 260px; height: 70px; float: left; margin-top: 5px;}
 
 .add_product_brandlist_list a{ display: inline-block; width: 100px; height: 40px; line-height: 40px; text-align: center; background: #09f; color: #fff; font-size: 16px; margin-left: 130px; margin-top: 20px;}
-#add_product_brandlist_del{ width: 16px; height: 16px; display: inline-block; background: url("image/cancel.png") no-repeat 0 0; position: absolute; top: -15px; right: 5px;}
+#add_product_brandlist_del{ width: 16px; height: 16px; display: inline-block; background: url("images/cancel.png") no-repeat 0 0; position: absolute; top: -15px; right: 5px;}
 

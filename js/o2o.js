@@ -21,16 +21,16 @@ var __USE_TYPE__ = 3;
 
 $.support.cors = true;
 AJAX = {
-    pictureUrl: "http://172.18.252.118:8023",   //上传图片显示地址
+    pictureUrl: "http://172.18.252.135:8023",   //上传图片显示地址
 
     //url: "http://172.18.254.158:8023/api/",
-    url: "http://172.18.252.118:8023/api/",
+    url: "http://172.18.252.135:8023/api/",
 
     areaXML:"../../js/region.xml",  //xml相对于pages里面的html的地址
 
     tgogoSiteUrl: "http://www.tgogo.net",//商城主站的Url，后台查看商品和抢购拼接链接需要
 
-    fileUploadUrl: "http://172.18.252.118:8023/api/product/UploadPictureByIframe",
+    fileUploadUrl: "http://172.18.252.135:8023/api/product/UploadPictureByIframe",
 
 
 

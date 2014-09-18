@@ -82,15 +82,15 @@
 }
 .artical_management_detail_edit{
     display: inline-block;
-    height: 30px;
-    line-height: 30px;
+    height: 42px;
+    line-height: 42px;
     padding-left: 18px;
     background: url("image/edit.png") no-repeat 0 7px;
 }
 .artical_management_detail_del{
     display: inline-block;
-    height: 30px;
-    line-height: 30px;
+    height: 42px;
+    line-height: 42px;
     padding-left: 18px;
     margin-left: 10px;
     background: url("image/delete.gif") no-repeat 0 7px;

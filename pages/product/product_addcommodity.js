@@ -349,10 +349,10 @@ product_addcommodity={
     //添加商品标签
     addLable:function(oTar,zoom){
         //oTar.css({"display":"block"});
-        var oTem=oTar.clone(true),
+        var oTem=oTar.clone(true).attr({"id":""}).css({"display":"block"}),
             oTarget=$("#product_addcommodity");
-        oTem.removeAttr("id");
-        oTem.removeAttr("style");
+//        oTem.removeAttr("id");
+//        oTem.removeAttr("style");
         oTem.insertAfter(oTarget);
         zoom.css({"display":"block"});
     },
